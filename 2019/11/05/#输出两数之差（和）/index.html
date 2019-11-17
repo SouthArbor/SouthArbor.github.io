@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>#输出两数之差（和） | 南有乔木</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#输出两数之差（和） ###编写完整的程序。输入两个数，输出他们的和与差。 输入说明：两个整数N1，N2； 输出说明：两个整数的和与差 输入样例：12 7 输出样例：19 5 1234567891011#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;math.h&amp;gt;void main()&amp;#123;	int a,b;	printf(&quot;请输入两个整数N1和N2（请用空格将N">
+  <meta name="description" content="#输出两数之差（和） ###编写完整的程序。输入两个数，输出他们的和与差。 输入说明：两个整数N1，N2； 输出说明：两个整数的和与差 输入样例：12 7 输出样例：19 5">
 <meta property="og:type" content="article">
 <meta property="og:title" content="#输出两数之差（和）">
 <meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;2019&#x2F;11&#x2F;05&#x2F;#%E8%BE%93%E5%87%BA%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%B7%AE%EF%BC%88%E5%92%8C%EF%BC%89&#x2F;index.html">
 <meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="#输出两数之差（和） ###编写完整的程序。输入两个数，输出他们的和与差。 输入说明：两个整数N1，N2； 输出说明：两个整数的和与差 输入样例：12 7 输出样例：19 5 1234567891011#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;math.h&amp;gt;void main()&amp;#123;	int a,b;	printf(&quot;请输入两个整数N1和N2（请用空格将N">
+<meta property="og:description" content="#输出两数之差（和） ###编写完整的程序。输入两个数，输出他们的和与差。 输入说明：两个整数N1，N2； 输出说明：两个整数的和与差 输入样例：12 7 输出样例：19 5">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-28T11:45:52.923Z">
+<meta property="og:updated_time" content="2019-11-17T13:25:20.275Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
@@ -81,9 +81,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/SouthArbor/SouthArbor.github.io" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/233070870" title="qq"><i class="icon-qq"></i></a>
+					<a class="weibo" target="_blank" href="https://www.qq.com/404/" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="weixin" target="_blank" href="/CCG8264948986" title="weixin"><i class="icon-weixin"></i></a>
+					<a class="rss" target="_blank" href="https://www.qq.com/404/" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="bilibili" target="_blank" href=" https://www.bilibili.com/ " title="bilibili"><i class="icon-bilibili"></i></a>
 		        
@@ -124,9 +124,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/SouthArbor/SouthArbor.github.io" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/233070870" title="qq"><i class="icon-qq"></i></a>
+						<a class="weibo" target="_blank" href="https://www.qq.com/404/" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="weixin" target="_blank" href="/CCG8264948986" title="weixin"><i class="icon-weixin"></i></a>
+						<a class="rss" target="_blank" href="https://www.qq.com/404/" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="bilibili" target="_blank" href=" https://www.bilibili.com/ " title="bilibili"><i class="icon-bilibili"></i></a>
 			        
@@ -182,6 +182,8 @@
 <p>输出说明：两个整数的和与差</p>
 <p>输入样例：12 7</p>
 <p>输出样例：19 5</p>
+<a id="more"></a> 
+
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入两个整数N1和N2（请用空格将N1和N2分隔开）："</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"两数之和为%d，两数之差为%d"</span>,a+b,<span class="built_in">abs</span>(a-b));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -307,6 +309,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -462,11 +477,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://alididi.club/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://bingak.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
             </li>
           
             <li class="search-li">

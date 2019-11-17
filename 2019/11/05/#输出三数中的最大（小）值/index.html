@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>#输出三数中的最大（小）值 | 南有乔木</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#输出三数中的最大（小）值 ### 编写完整的程序。输入三个数，输出其中的最大数，最小数。 输入说明：两个整数N1 N2 N3； 输出说明：最大数 最小数 输入样例：5 4 9 输出样例：9 4 1234567891011121314151617181920212223242526272829303132333435363738#include&amp;lt;stdio.h&amp;gt;void print_m">
+  <meta name="description" content="#输出三数中的最大（小）值 ### 编写完整的程序。输入三个数，输出其中的最大数，最小数。 输入说明：两个整数N1 N2 N3； 输出说明：最大数 最小数 输入样例：5 4 9 输出样例：9 4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="#输出三数中的最大（小）值">
 <meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;2019&#x2F;11&#x2F;05&#x2F;#%E8%BE%93%E5%87%BA%E4%B8%89%E6%95%B0%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%EF%BC%88%E5%B0%8F%EF%BC%89%E5%80%BC&#x2F;index.html">
 <meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="#输出三数中的最大（小）值 ### 编写完整的程序。输入三个数，输出其中的最大数，最小数。 输入说明：两个整数N1 N2 N3； 输出说明：最大数 最小数 输入样例：5 4 9 输出样例：9 4 1234567891011121314151617181920212223242526272829303132333435363738#include&amp;lt;stdio.h&amp;gt;void print_m">
+<meta property="og:description" content="#输出三数中的最大（小）值 ### 编写完整的程序。输入三个数，输出其中的最大数，最小数。 输入说明：两个整数N1 N2 N3； 输出说明：最大数 最小数 输入样例：5 4 9 输出样例：9 4">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-28T12:02:25.967Z">
+<meta property="og:updated_time" content="2019-11-17T13:25:00.713Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
@@ -81,9 +81,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/SouthArbor/SouthArbor.github.io" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/233070870" title="qq"><i class="icon-qq"></i></a>
+					<a class="weibo" target="_blank" href="https://www.qq.com/404/" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="weixin" target="_blank" href="/CCG8264948986" title="weixin"><i class="icon-weixin"></i></a>
+					<a class="rss" target="_blank" href="https://www.qq.com/404/" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="bilibili" target="_blank" href=" https://www.bilibili.com/ " title="bilibili"><i class="icon-bilibili"></i></a>
 		        
@@ -124,9 +124,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/SouthArbor/SouthArbor.github.io" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/233070870" title="qq"><i class="icon-qq"></i></a>
+						<a class="weibo" target="_blank" href="https://www.qq.com/404/" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="weixin" target="_blank" href="/CCG8264948986" title="weixin"><i class="icon-weixin"></i></a>
+						<a class="rss" target="_blank" href="https://www.qq.com/404/" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="bilibili" target="_blank" href=" https://www.bilibili.com/ " title="bilibili"><i class="icon-bilibili"></i></a>
 			        
@@ -183,6 +183,8 @@
 <p>输出说明：最大数 最小数</p>
 <p>输入样例：5 4 9</p>
 <p>输出样例：9 4</p>
+<a id="more"></a> 
+
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_max</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a&gt;b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a&gt;c) <span class="built_in">printf</span>(<span class="string">"\n最大数：%d"</span>,a);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n最大数：%d"</span>,c);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(b&gt;c) <span class="built_in">printf</span>(<span class="string">"\n最大数：%d"</span>,b);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n最大数：%d"</span>,c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_min</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a&lt;b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a&lt;c) <span class="built_in">printf</span>(<span class="string">"\n最小数：%d"</span>,a); </span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n最小数：%d"</span>,c);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(b&lt;c) <span class="built_in">printf</span>(<span class="string">"\n最小数：%d"</span>,b);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n最小数：%d"</span>,c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b,c;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入三个整数（请用空格将每个数分隔开）："</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">	print_min(a,b,c);</span><br><span class="line">	print_max(a,b,c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -308,6 +310,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -463,11 +478,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://alididi.club/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://bingak.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
             </li>
           
             <li class="search-li">

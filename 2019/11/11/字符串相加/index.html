@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>字符串相加 | 南有乔木</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="字符串相加给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。 注意： num1 和num2 的长度都小于 5100.num1 和num2 都只包含数字 0-9.num1 和num2 都不包含任何前导零。你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。 解题思路：双指针法##字符’0‘~’9‘ 对应ASCII码是48 ~ 57。 从字符串的尾">
+  <meta name="description" content="字符串相加给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。 注意： num1 和num2 的长度都小于 5100.num1 和num2 都只包含数字 0-9.num1 和num2 都不包含任何前导零。你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符串相加">
 <meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0&#x2F;index.html">
 <meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="字符串相加给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。 注意： num1 和num2 的长度都小于 5100.num1 和num2 都只包含数字 0-9.num1 和num2 都不包含任何前导零。你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。 解题思路：双指针法##字符’0‘~’9‘ 对应ASCII码是48 ~ 57。 从字符串的尾">
+<meta property="og:description" content="字符串相加给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。 注意： num1 和num2 的长度都小于 5100.num1 和num2 都只包含数字 0-9.num1 和num2 都不包含任何前导零。你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-11T12:29:05.226Z">
+<meta property="og:updated_time" content="2019-11-17T13:22:48.156Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
@@ -81,9 +81,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/SouthArbor/SouthArbor.github.io" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/233070870" title="qq"><i class="icon-qq"></i></a>
+					<a class="weibo" target="_blank" href="https://www.qq.com/404/" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="weixin" target="_blank" href="/CCG8264948986" title="weixin"><i class="icon-weixin"></i></a>
+					<a class="rss" target="_blank" href="https://www.qq.com/404/" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="bilibili" target="_blank" href=" https://www.bilibili.com/ " title="bilibili"><i class="icon-bilibili"></i></a>
 		        
@@ -124,9 +124,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/SouthArbor/SouthArbor.github.io" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/233070870" title="qq"><i class="icon-qq"></i></a>
+						<a class="weibo" target="_blank" href="https://www.qq.com/404/" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="weixin" target="_blank" href="/CCG8264948986" title="weixin"><i class="icon-weixin"></i></a>
+						<a class="rss" target="_blank" href="https://www.qq.com/404/" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="bilibili" target="_blank" href=" https://www.bilibili.com/ " title="bilibili"><i class="icon-bilibili"></i></a>
 			        
@@ -179,6 +179,8 @@
         <h1 id="字符串相加"><a href="#字符串相加" class="headerlink" title="字符串相加"></a>字符串相加</h1><p>给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。</p>
 <p>注意：</p>
 <p>num1 和num2 的长度都小于 5100.<br>num1 和num2 都只包含数字 0-9.<br>num1 和num2 都不包含任何前导零。<br>你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。</p>
+<a id="more"></a> 
+
 <h5 id="解题思路：双指针法"><a href="#解题思路：双指针法" class="headerlink" title="解题思路：双指针法"></a>解题思路：双指针法</h5><p>##字符’0‘~’9‘ 对应ASCII码是48 ~ 57。</p>
 <p>从字符串的尾部，从后往前对两个字符串进行相加处理。</p>
 <p>需要注意的是：字符串中的数字是属于字符，但字符对应的ASCII是数字，只需要取出字符串中的数字字符，然后减去 ’0‘ 就可以得到该’数字字符‘对应的真正数字。</p>
@@ -308,6 +310,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字符串相加"><span class="toc-number">1.</span> <span class="toc-text">字符串相加</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解题思路：双指针法"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">解题思路：双指针法</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -463,11 +478,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://alididi.club/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://bingak.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
             </li>
           
             <li class="search-li">
