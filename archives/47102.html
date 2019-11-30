@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>奇偶排序 | 南有乔木</title>
+  <title>#输出两数之差（和） | 南有乔木</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="奇偶排序编写完整的程序。将一个数组中的所有奇数移到偶数之前，要求奇偶内部有序。 输入说明：整数数组； 输出说明：整数数组，奇数移到偶数之前且奇偶部分分别有序 输入样例：4 5 1 6 9 8 输出样例：1 5 9 4 6 8">
+  <meta name="description" content="#输出两数之差（和） ###编写完整的程序。输入两个数，输出他们的和与差。 输入说明：两个整数N1，N2； 输出说明：两个整数的和与差 输入样例：12 7 输出样例：19 5">
 <meta name="keywords" content="试题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="奇偶排序">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;2019&#x2F;11&#x2F;26&#x2F;%E5%A5%87%E5%81%B6%E6%8E%92%E5%BA%8F&#x2F;index.html">
+<meta property="og:title" content="#输出两数之差（和）">
+<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;47102.html">
 <meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="奇偶排序编写完整的程序。将一个数组中的所有奇数移到偶数之前，要求奇偶内部有序。 输入说明：整数数组； 输出说明：整数数组，奇数移到偶数之前且奇偶部分分别有序 输入样例：4 5 1 6 9 8 输出样例：1 5 9 4 6 8">
+<meta property="og:description" content="#输出两数之差（和） ###编写完整的程序。输入两个数，输出他们的和与差。 输入说明：两个整数N1，N2； 输出说明：两个整数的和与差 输入样例：12 7 输出样例：19 5">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T13:25:09.272Z">
+<meta property="og:updated_time" content="2019-11-27T13:26:57.454Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
@@ -58,7 +58,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives/index.html">归档</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -116,6 +118,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -135,12 +139,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,37 +161,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-奇偶排序" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-#输出两数之差（和）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      奇偶排序
+      #输出两数之差（和）
     </h1>
   
 
         
-        <a href="/2019/11/26/%E5%A5%87%E5%81%B6%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:57.879Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
+        <a href="/archives/47102.html" class="archive-article-date">
+  	<time datetime="2019-11-26T12:26:57.640Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
 </a>
         
+    
+    
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+    
+    
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="奇偶排序"><a href="#奇偶排序" class="headerlink" title="奇偶排序"></a>奇偶排序</h1><p>编写完整的程序。将一个数组中的所有奇数移到偶数之前，要求奇偶内部有序。</p>
-<p>输入说明：整数数组；</p>
-<p>输出说明：整数数组，奇数移到偶数之前且奇偶部分分别有序</p>
-<p>输入样例：4 5 1 6 9 8</p>
-<p>输出样例：1 5 9 4 6 8<a id="more"></a> </p>
-<h5 id="解题思路：双指针法"><a href="#解题思路：双指针法" class="headerlink" title="解题思路：双指针法"></a>解题思路：双指针法</h5><p>定义两个指针i,j。i指向数组的首元素，j指向数组的最后一个元素。</p>
-<p>一次遍历即可完成奇偶交换</p>
-<p>1、如果当前a[i]是奇数，则无需交换，i后移，i++。</p>
-<p>2、如果当前a[i]是偶数，a[j]是奇数，则交换两数位置，然后指针i后移，i++，指针j前移，j–。</p>
-<p>3、如果当前a[i]是偶数，a[j]也是偶数，则j自减1，j–。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//c语言实现</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> *a,<span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j = len<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">int</span> flag;</span><br><span class="line">	<span class="keyword">while</span>(i != j)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i] % <span class="number">2</span> == <span class="number">1</span>) i++;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(a[j] % <span class="number">2</span> != <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> temp = a[i];</span><br><span class="line">				a[i] = a[j];</span><br><span class="line">				a[j] = temp;</span><br><span class="line">				a++;</span><br><span class="line">			&#125;</span><br><span class="line">				j--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	flag = i;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;flag;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i;j&lt;flag;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(a[i] &lt; a[j])</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> temp = a[i];</span><br><span class="line">				a[i] = a[j];</span><br><span class="line">				a[j] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=flag;i&lt;len <span class="number">-1</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i;j&lt;len - <span class="number">1</span>;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(a[i] &lt; a[j])</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> temp = a[i];</span><br><span class="line">				a[i] = a[j];</span><br><span class="line">				a[j] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">5</span>],n,i;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入一个长度为10的数组："</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n请输入第%d个数："</span>,i+<span class="number">1</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</span><br><span class="line">		</span><br><span class="line">	sort(a,<span class="number">5</span>); </span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>#<strong>输出两数之差（和）</strong></p>
+<p>###编写完整的程序。输入两个数，输出他们的和与差。</p>
+<p>输入说明：两个整数N1，N2；</p>
+<p>输出说明：两个整数的和与差</p>
+<p>输入样例：12 7</p>
+<p>输出样例：19 5</p>
+<a id="more"></a> 
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入两个整数N1和N2（请用空格将N1和N2分隔开）："</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"两数之和为%d，两数之差为%d"</span>,a+b,<span class="built_in">abs</span>(a-b));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -293,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/2019/11/26/%E5%A5%87%E5%81%B6%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/47102.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,18 +320,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/26/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/archives/57731.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          杨辉三角
+          #输出三数中的最大（小）值
         
       </div>
     </a>
   
   
-    <a href="/2019/11/26/%E5%88%86%E5%89%B2%E5%B9%B3%E8%A1%A1%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">分割平衡字符串</div>
+    <a href="/archives/47236.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉树的中序遍历</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -345,7 +358,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#奇偶排序"><span class="toc-number">1.</span> <span class="toc-text">奇偶排序</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解题思路：双指针法"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">解题思路：双指针法</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -377,7 +390,18 @@
     		&copy; 2019 S.Arbor
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+    
+    
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      		<span id="busuanzi_container_site_pv">
+                本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_container_site_uv">
+                本站访客数：<span id="busuanzi_value_site_uv"></span>人
+            </span>
+    
+    
       	</div>
     </div>
   </div>
@@ -453,15 +477,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -469,7 +485,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
               </li>
             
             <div class="clearfix"></div>

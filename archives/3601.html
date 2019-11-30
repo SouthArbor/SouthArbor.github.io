@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>字符串相加 | 南有乔木</title>
+  <title>杨辉三角 | 南有乔木</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="字符串相加给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。 注意： num1 和num2 的长度都小于 5100.num1 和num2 都只包含数字 0-9.num1 和num2 都不包含任何前导零。你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。">
+  <meta name="description" content="杨辉三角给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 示例: 输入: 5输出:[     [1],    [1,1],   [1,2,1],  [1,3,3,1], [1,4,6,4,1]]">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="字符串相加">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;2019&#x2F;11&#x2F;26&#x2F;%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0&#x2F;index.html">
+<meta property="og:title" content="杨辉三角">
+<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;3601.html">
 <meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="字符串相加给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。 注意： num1 和num2 的长度都小于 5100.num1 和num2 都只包含数字 0-9.num1 和num2 都不包含任何前导零。你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。">
+<meta property="og:description" content="杨辉三角给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 示例: 输入: 5输出:[     [1],    [1,1],   [1,2,1],  [1,3,3,1], [1,4,6,4,1]]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T13:21:54.955Z">
+<meta property="og:updated_time" content="2019-11-27T13:25:41.649Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
@@ -58,7 +58,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives/index.html">归档</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -116,6 +118,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -135,12 +139,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,38 +161,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-字符串相加" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-杨辉三角" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      字符串相加
+      杨辉三角
     </h1>
   
 
         
-        <a href="/2019/11/26/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:58.212Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
+        <a href="/archives/3601.html" class="archive-article-date">
+  	<time datetime="2019-11-26T12:26:57.994Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
 </a>
         
+    
+    
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+    
+    
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="字符串相加"><a href="#字符串相加" class="headerlink" title="字符串相加"></a>字符串相加</h1><p>给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。</p>
-<p>注意：</p>
-<p>num1 和num2 的长度都小于 5100.<br>num1 和num2 都只包含数字 0-9.<br>num1 和num2 都不包含任何前导零。<br>你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。</p>
+        <h1 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h1><p>给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。</p>
+<p>在杨辉三角中，每个数是它左上方和右上方的数的和。</p>
+<p>示例:</p>
+<p>输入: 5<br>输出:<br>[<br>     [1],<br>    [1,1],<br>   [1,2,1],<br>  [1,3,3,1],<br> [1,4,6,4,1]<br>]</p>
 <a id="more"></a> 
 
-<h5 id="解题思路：双指针法"><a href="#解题思路：双指针法" class="headerlink" title="解题思路：双指针法"></a>解题思路：双指针法</h5><p>##字符’0‘~’9‘ 对应ASCII码是48 ~ 57。</p>
-<p>从字符串的尾部，从后往前对两个字符串进行相加处理。</p>
-<p>需要注意的是：字符串中的数字是属于字符，但字符对应的ASCII是数字，只需要取出字符串中的数字字符，然后减去 ’0‘ 就可以得到该’数字字符‘对应的真正数字。</p>
-<p>从后往前先分别对两个字符串的数字字符进行处理后相加，若sum大于10，则标记flag=1（下一位需要加一），sum = sum/10。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">addStrings</span><span class="params">(<span class="keyword">char</span> * num1, <span class="keyword">char</span> * num2)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="built_in">strlen</span>(num1)<span class="number">-1</span>,j = <span class="built_in">strlen</span>(num2)<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">char</span> *res;</span><br><span class="line">    <span class="keyword">int</span> maxlen = (i&gt;j ? i+<span class="number">1</span>:j+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> k = maxlen+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    res = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>) * (maxlen+<span class="number">2</span>));</span><br><span class="line">    <span class="keyword">if</span>(!res) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="built_in">memset</span>(res, <span class="number">0</span>, <span class="keyword">sizeof</span>(<span class="keyword">char</span>) * (maxlen + <span class="number">2</span>));</span><br><span class="line">    <span class="keyword">while</span>(i&gt;=<span class="number">0</span> || j&gt;=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = flag;</span><br><span class="line">        sum += (i &gt;= <span class="number">0</span>) ? num1[i--] - <span class="string">'0'</span> : <span class="number">0</span>;</span><br><span class="line">        sum += (j &gt;= <span class="number">0</span>) ? num2[j--] - <span class="string">'0'</span> : <span class="number">0</span>;<span class="comment">//此处有个十分惨痛的教训！！！我不小心将num2写成了num1，然后测试代码一直提示数组越界。我愣是被这个小失误卡住了半个多小时！！！！以后一定要小心了，这种细微差别的代码错误实在太难找了！</span></span><br><span class="line">        res[--k] = sum % <span class="number">10</span> + <span class="string">'0'</span>;</span><br><span class="line">        flag = sum / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(flag)</span><br><span class="line">    &#123;</span><br><span class="line">        res[<span class="number">0</span>] = <span class="string">'1'</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> res + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这题可以说是老生常谈了，这题的重点在于对在循环中对二维数组每一行的内存的申请。</p>
+<p>用一个二维数组来保存计算的杨辉三角的计算结果，res[i][j] = res[i-1][j] + res[i-1][j-1];</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//c语言</span></span><br><span class="line"><span class="function"><span class="keyword">int</span>** <span class="title">generate</span><span class="params">(<span class="keyword">int</span> numRows, <span class="keyword">int</span>* returnSize, <span class="keyword">int</span>** returnColumnSizes)</span></span>&#123;</span><br><span class="line">    *returnSize = numRows;</span><br><span class="line">    *returnColumnSizes = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * numRows);</span><br><span class="line">    <span class="keyword">int</span> **res = (<span class="keyword">int</span>**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>*) * numRows) ;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;numRows;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        (*returnColumnSizes)[i] = i+<span class="number">1</span>;</span><br><span class="line">        res[i] = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * (i+<span class="number">1</span>));</span><br><span class="line">        res[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        res[i][i] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;i;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            res[i][j] = res[i<span class="number">-1</span>][j<span class="number">-1</span>] + res[i<span class="number">-1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -292,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/2019/11/26/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/3601.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,18 +318,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/26/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/archives/62075.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          二叉树的后序遍历
+          杨辉三角II
         
       </div>
     </a>
   
   
-    <a href="/2019/11/26/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92II/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">杨辉三角II</div>
+    <a href="/archives/28594.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">奇偶排序</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -344,7 +356,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字符串相加"><span class="toc-number">1.</span> <span class="toc-text">字符串相加</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解题思路：双指针法"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">解题思路：双指针法</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#杨辉三角"><span class="toc-number">1.</span> <span class="toc-text">杨辉三角</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.0.1.</span> <span class="toc-text">思路</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -376,7 +388,18 @@
     		&copy; 2019 S.Arbor
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+    
+    
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      		<span id="busuanzi_container_site_pv">
+                本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_container_site_uv">
+                本站访客数：<span id="busuanzi_value_site_uv"></span>人
+            </span>
+    
+    
       	</div>
     </div>
   </div>
@@ -452,15 +475,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,7 +483,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>HEXO+GitHub搭建个人博客 | 南有乔木</title>
+  <title>关于malloc的内存分配 | 南有乔木</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HEXO+GitHub搭建个人博客原文地址： https:&#x2F;&#x2F;www.cnblogs.com&#x2F;shwee&#x2F;p&#x2F;11421156.html  # 第一部分 搭建hexo的初级搭建还有部署到github page上，以及个人域名的绑定。 Hexo搭建步骤 1.安装Git  2.安装Node.js  3.安装Hexo  4.GitHub创建个人仓库  5.生成SSH添加到GitHub  6.将hexo部">
+  <meta name="description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HEXO+GitHub搭建个人博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;2019&#x2F;11&#x2F;04&#x2F;HEXO+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="关于malloc的内存分配">
+<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;37683.html">
 <meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="HEXO+GitHub搭建个人博客原文地址： https:&#x2F;&#x2F;www.cnblogs.com&#x2F;shwee&#x2F;p&#x2F;11421156.html  # 第一部分 搭建hexo的初级搭建还有部署到github page上，以及个人域名的绑定。 Hexo搭建步骤 1.安装Git  2.安装Node.js  3.安装Hexo  4.GitHub创建个人仓库  5.生成SSH添加到GitHub  6.将hexo部">
+<meta property="og:description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T12:29:05.220Z">
+<meta property="og:updated_time" content="2019-11-27T13:28:55.499Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
@@ -57,7 +58,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives/index.html">归档</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -115,6 +118,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -134,12 +139,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -154,159 +161,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HEXO+GitHub搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于malloc的内存分配" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HEXO+GitHub搭建个人博客
+      关于malloc的内存分配
     </h1>
   
 
         
-        <a href="/2019/11/04/HEXO+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-04T12:52:00.857Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
+        <a href="/archives/37683.html" class="archive-article-date">
+  	<time datetime="2019-11-24T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-24</time>
 </a>
         
+    
+    
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+    
+    
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="HEXO-GitHub搭建个人博客"><a href="#HEXO-GitHub搭建个人博客" class="headerlink" title="HEXO+GitHub搭建个人博客"></a>HEXO+GitHub搭建个人博客</h1><p>原文地址： <a href="https://www.cnblogs.com/shwee/p/11421156.html" target="_blank" rel="noopener">https://www.cnblogs.com/shwee/p/11421156.html</a> </p>
-<h2 id="第一部分-搭建"><a href="#第一部分-搭建" class="headerlink" title="# 第一部分 搭建"></a># 第一部分 搭建</h2><p><code>hexo</code>的初级搭建还有部署到<code>github page</code>上，以及个人域名的绑定。</p>
-<h2 id="Hexo搭建步骤"><a href="#Hexo搭建步骤" class="headerlink" title="Hexo搭建步骤"></a>Hexo搭建步骤</h2><ul>
-<li><p>1.安装<code>Git</code></p>
-</li>
-<li><p>2.安装<code>Node.js</code></p>
-</li>
-<li><p>3.安装<code>Hexo</code></p>
-</li>
-<li><p>4.<code>GitHub</code>创建个人仓库</p>
-</li>
-<li><p>5.生成<code>SSH</code>添加到<code>GitHub</code></p>
-</li>
-<li><p>6.将<code>hexo</code>部署到<code>GitHub</code></p>
-</li>
-<li><p>7.设置个人域名</p>
-</li>
-<li><p>8.发布文章</p>
+        <h1 id="关于malloc的内存分配"><a href="#关于malloc的内存分配" class="headerlink" title="关于malloc的内存分配"></a>关于malloc的内存分配</h1><p>​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。</p>
+<p>​    问题的引出：      </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a> 
 
-</li>
-</ul>
-<h2 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="## 1. 安装Git"></a>## 1. 安装Git</h2><p>为了把本地的网页文件上传到<code>github</code>上面去，需要用到工具———Git<a href="https://git-scm.com/download" target="_blank" rel="noopener">[下载地址]</a>。<code>Git</code>是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。<code>Git</code>非常强大，建议每个人都去了解一下。廖雪峰老师的<code>Git</code>教程写的非常好，大家可以看一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a></p>
-<p><strong>windows：</strong>到<code>git</code>官网上下载<code>.exe</code>文件,<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Download git</a>,安装选项还是全部默认，只不过最后一步添加路径时选择<code>Use Git from the Windows Command Prompt</code>，这样我们就可以直接在命令提示符里打开<code>git</code>了。</p>
-<blockquote>
-<p>顺便说一下，<code>windows</code>在<code>git</code>安装完后，就可以直接使用<code>git bash</code>来敲命令行了，不用自带的<code>cmd</code>，<code>cmd</code>有点难用。</p>
-</blockquote>
-<p><strong>linux：</strong>对<code>linux</code>来说实在是太简单了，因为最早的<code>git</code>就是在<code>linux</code>上编写的，只需要一行代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
-
-<p>安装完成后在命令提示符中输入<code>git --version</code>来查看一下版本验证是否安装成功。</p>
-<h2 id="2-安装nodejs"><a href="#2-安装nodejs" class="headerlink" title="## 2. 安装nodejs"></a>## 2. 安装nodejs</h2><p><code>Hexo</code>是基于<code>node.js</code>编写的，所以需要安装一下<code>node.js</code>和里面的<code>npm</code>工具。</p>
-<p><strong>windows：</strong>下载稳定版或者最新版都可以<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js</a>，安装选项全部默认，一路点击<code>Next</code>。<br>最后安装好之后，按<code>Win+R</code>打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
-<p><strong>linux：</strong>命令行安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
-
-<p>不过不推荐命令行安装，有时候有问题，建议直接到官网去下载编译好的压缩文件。<br>然后解压到你指定的文件夹即可，比如我解压到我系统的<code>/home/shw/MySoftwares</code>目录下了。</p>
-<blockquote>
-<p>注意本压缩包是<code>.tar.xz</code>格式的，需要两次解压</p>
-</blockquote>
-<p>配置一下环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>复制下面两行到刚打开的<code>profile</code>文件最底部(注意<code>node</code>的安装地址<code>/home/shw/MySoftwares/node-v12.8.0-linux-x64</code>换成自己的)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NODE_HOME=/home/shw/MySoftwares/node-v12.8.0-linux-x64</span><br><span class="line">export PATH=$PATH:$NODE_HOME/bin</span><br></pre></td></tr></table></figure>
-
-<p>保存后退出，再执行下面命令将环境变量生效：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>将目录软链接到全局环境下（命令后面的<code>/usr/local/bin/node</code>是固定的）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /home/shw/MySoftwares/node-v12.8.0-linux-x64/node /usr/local/bin/node</span><br><span class="line">sudo ln -s /home/shw/MySoftwares/node-v12.8.0-linux-x64/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
-
-<p>这样安装好了以后使用<code>npm</code>安装的包(比如：<code>ionic serve</code>)，使用包的命令时可能会提示找不到命令，没关系，在用户目录下终端执行下面命令(固定写法)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;export PATH=$(npm prefix -g)/bin:$PATH&quot; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>这样我们在所有用户下，都可以使用<code>npm</code>，也可以使用<code>npm</code>安装的包的命令。成功的将<code>nodejs</code>安装并配置到全局环境下。</p>
-<p>安装完后，打开命令行终端，输入:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>检查一下有没有安装成功</p>
-<h2 id="添加国内镜像源"><a href="#添加国内镜像源" class="headerlink" title="添加国内镜像源"></a><strong>添加国内镜像源</strong></h2><p>如果没有梯子的话，可以使用阿里的国内镜像进行加速。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="## 3. 安装Hexo"></a>## 3. 安装Hexo</h2><p>前面<code>git</code>和<code>nodejs</code>安装好后，就可以安装<code>hexo</code>了，你可以先创建一个文件夹<code>MyBlog</code>，用来存放自己的博客文件，然后<code>cd</code>到这个文件夹下（或者在这个文件夹下直接右键<code>git bash</code>打开）。</p>
-<p>比如我的博客文件都存放在<code>D:\Study\MyBlog</code>目录下。</p>
-<p>在该目录下右键点击<code>Git Bash Here</code>，打开<code>git</code>的控制台窗口，以后我们所有的操作都在<code>git</code>控制台进行，就不用<code>Windows</code>自带的<code>cmd</code>了。</p>
-<p>定位到该目录下，输入<code>npm install -g hexo-cli</code>安装<code>Hexo</code>。可能会有几个报错，无视它就行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
-<p>至此<code>hexo</code>就安装完了。</p>
-<p>接下来初始化一下<code>hexo</code>,即初始化我们的网站，输入<code>hexo init</code>初始化文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init MyBlog</span><br></pre></td></tr></table></figure>
-
-<p>这个<code>MyBlog</code>可以自己取什么名字都行，然后，接着输入<code>npm install</code>安装必备的组件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd MyBlog      //进入这个MyBlog文件夹</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>新建完成后，指定文件夹<code>MyBlog</code>目录下有：</p>
-<ul>
-<li><code>node_modules:</code> 依赖包</li>
-<li><code>public：</code>存放生成的页面</li>
-<li><code>scaffolds：</code>生成文章的一些模板</li>
-<li><code>source：</code>用来存放你的文章</li>
-<li><code>themes：</code>主题**</li>
-<li><code>_config.yml:</code> 博客的配置文件**</li>
-</ul>
-<p>这样本地的网站配置也弄好啦，输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server(或者简写:hexo s）)</span><br></pre></td></tr></table></figure>
-
-<p>然后浏览器打开<a href="http://localhost:4000/，就可以在本地预览博客啦！">http://localhost:4000/，就可以在本地预览博客啦！</a><br>按<code>ctrl+c</code>关闭本地服务器。</p>
-<h2 id="4-注册Github账号创建个人仓库"><a href="#4-注册Github账号创建个人仓库" class="headerlink" title="## 4. 注册Github账号创建个人仓库"></a>## 4. 注册Github账号创建个人仓库</h2><p>接下来就去注册一个<code>github</code>账号，用来存放我们的网站。大多数小伙伴应该都有了吧，作为一个合格的程序猿（媛）还是要有一个的。</p>
-<p>打开<a href="https://github.com/，新建一个项目仓库`New" target="_blank" rel="noopener">https://github.com/，新建一个项目仓库`New</a> repository<code>，
-输入自己的项目名字，后面一定要加</code>.github.io<code>后缀，</code>README`初始化也要勾上。</p>
-<blockquote>
-<p>要创建一个和你用户名相同的仓库，后面加.<a href="http://github.io，只有这样，将来要部署到`GitHub" target="_blank" rel="noopener">http://github.io，只有这样，将来要部署到`GitHub</a> page<code>的时候，才会被识别，也就是http://xxxx.github.io，其中xxx就是你注册</code>GitHub`的用户名。例如我的：<a href="http://shw2018.github.io" target="_blank" rel="noopener">http://shw2018.github.io</a></p>
-</blockquote>
-<h2 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="## 5. 生成SSH添加到GitHub"></a>## 5. 生成SSH添加到GitHub</h2><p>生成<code>SSH</code>添加到<code>GitHub</code>，连接<code>Github</code>与本地。<br>右键打开<code>git bash</code>，然后输入下面命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这里的<code>yourname</code>输入你的<code>GitHub</code>用户名，<code>youremail</code>输入你<code>GitHub</code>的邮箱。这样<code>GitHub</code>才能知道你是不是对应它的账户。例如我的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;shw2018&quot;</span><br><span class="line">git config --global user.email &quot;hwsun@std.uestc.edu.cn&quot;</span><br></pre></td></tr></table></figure>
-
-<p>可以用以下两条，检查一下你有没有输对</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-
-<p>然后创建<code>SSH</code>,一路回车</p>
-<blockquote>
-<p><code>ssh</code>，简单来讲，就是一个秘钥，其中，<code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在<code>GitHub</code>上，这样当你链接<code>GitHub</code>自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过<code>git</code>上传你的文件到<code>GitHub</code>上。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这个时候它会告诉你已经生成了<code>.ssh</code>的文件夹。在你的电脑中找到这个文件夹。或者<code>git bash</code>中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>将输出的内容复制到框中，点击确定保存。</p>
-<p>打开<a href="http://github.com/" target="_blank" rel="noopener">github</a>，在头像下面点击<code>settings</code>，再点击<code>SSH and GPG keys</code>，新建一个<code>SSH</code>，名字随便取一个都可以，把你的<code>id_rsa.pub</code>里面的信息复制进去。</p>
-<p>在<code>git bash</code>输入<code>ssh -T git@github.com</code>。</p>
-<h2 id="6-将hexo部署到GitHub"><a href="#6-将hexo部署到GitHub" class="headerlink" title="## 6. 将hexo部署到GitHub"></a>## 6. 将hexo部署到GitHub</h2><p>这一步，我们就可以将<code>hexo</code>和<code>GitHub</code>关联起来，也就是将<code>hexo</code>生成的文章部署到<code>GitHub</code>上，打开博客根目录下的<code>_config.yml</code>文件，这是博客的配置文件，在这里你可以修改与博客配置相关的各种信息。</p>
-<p>修改最后一行的配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/shw2018/shw2018.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p><code>repository</code>修改为你自己的<code>github</code>项目地址即可，就是部署时，告诉工具，将生成网页通过<code>git</code>方式上传到你对应的链接仓库中。</p>
-<p>这个时候需要先安装<code>deploy-git</code> ，也就是部署的命令,这样你才能用命令部署到<code>GitHub</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>然后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。 <code>hexo generate</code>顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写 ，<code>hexo deploy</code>部署文章，可以用<code>hexo d</code>缩写</p>
-<blockquote>
-<p>注意<code>deploy</code>时可能要你输入<code>username</code>和<code>password</code>。</p>
-</blockquote>
-<p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a> 这个网站看到你的博客了！！</p>
+<p>C语言的数组的内存空间一定是连续的吗？</p>
+<p>按照我之前的想法，我认为这是可以申请成功的，malloc在给数组分配内存时会将内存块a和b连接起来共同作为这个数组的内存空间；（但事实是，我的想法是错误的）</p>
+<p>我之前一直认为： malloc 寻找内存，如果找不到到一个&gt;= 需求的连续内存空间，malloc就会将多个不连续的小内存块连接起来使用</p>
+<p>经过和群里的大佬的一番讨论，对malloc的内存分配机制有了更深入的了解：</p>
+<p>​    malloc 是用链表实现的</p>
+<p>​    内存以堆组成</p>
+<p>​    将可用的内存块连接为一个长长的列表的所谓空闲链表</p>
+<p>​    调用的时候就沿着链表找</p>
+<p>最后在一篇博文中找到了问题的答案：</p>
+<h6 id="原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><a href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850" class="headerlink" title="原文链接： https://blog.csdn.net/Fan0920/article/details/80999850"></a>原文链接： <a href="https://blog.csdn.net/Fan0920/article/details/80999850" target="_blank" rel="noopener">https://blog.csdn.net/Fan0920/article/details/80999850</a></h6><h2 id="问题的引出："><a href="#问题的引出：" class="headerlink" title="问题的引出："></a>问题的引出：</h2><p>堆包含一个链表来维护已用和空闲的内存块。在堆上新分配（用 new 或者 malloc）内存是从空闲的内存块中找到一些满足要求的合适块。所以可能让人觉得只要有很多不连续的零散的小区域，只要总数达到申请的内存块，就可以分配。</p>
+<p>  但事实上是不行的，这又让人觉得是不是零散的内存块不能连接成一个大的空间，而必须要一整块连续的内存空间才能申请成功呢。</p>
+<h2 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：</h2><ol>
+<li>申请和释放许多小的块可能会产生如下状态：在已用块之间存在很多小的空闲块。进而申请大块内存失败，虽然空闲块的总和足够，但是空闲的小块是零散的，不能满足申请的大小。这叫做“堆碎片”。</li>
+<li>当旁边有空闲块的已用块被释放时，新的空闲块会与相连的空闲块合并成一个大的空闲块，这样就可以有效的减少”堆碎片”的产生。</li>
+<li>堆分配的空间在<strong>逻辑地址上是连续的</strong>，但在<strong>物理地址上是不连续的</strong>（因为采用了页式内存管理,windows下有段机制、分页机制），如果逻辑地址空间上已经没有一段连续且足够大的空间，则分配内存失败。</li>
+</ol>
+<h3 id="堆栈的知识扩充："><a href="#堆栈的知识扩充：" class="headerlink" title="堆栈的知识扩充："></a>堆栈的知识扩充：</h3><p>原文地址： <a href="https://blog.csdn.net/jin13277480598/article/details/54406980" target="_blank" rel="noopener">https://blog.csdn.net/jin13277480598/article/details/54406980</a> </p>
 
       
 
@@ -341,7 +247,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/堆栈//" class="article-tag-list-link color3">堆栈</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -391,7 +319,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/2019/11/04/HEXO+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/37683.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -405,15 +333,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/11/%E6%A2%A6%E5%88%B0%E4%B8%80%E4%B8%AA%E5%8D%96%E8%8A%B1%E7%9A%84%E4%B8%A4%E6%89%8B%E7%A9%BA%E7%A9%BA%E8%B7%9F%E6%88%91%E8%AF%B4%20%E4%BA%BA%E8%A6%81%E5%85%88%E6%84%9F%E5%88%B0%E5%B9%B8%E7%A6%8F%20%E6%89%8D%E8%83%BD%E7%9C%8B%E5%88%B0%E7%8E%AB%E7%91%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/archives/47236.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          梦到一个卖花的两手空空跟我说 人要先感到幸福 才能看到玫瑰
+          二叉树的中序遍历
         
       </div>
     </a>
   
+  
+    <a href="/archives/44655.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">tip</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -438,7 +371,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HEXO-GitHub搭建个人博客"><span class="toc-number">1.</span> <span class="toc-text">HEXO+GitHub搭建个人博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一部分-搭建"><span class="toc-number">1.1.</span> <span class="toc-text"># 第一部分 搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo搭建步骤"><span class="toc-number">1.2.</span> <span class="toc-text">Hexo搭建步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装Git"><span class="toc-number">1.3.</span> <span class="toc-text">## 1. 安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装nodejs"><span class="toc-number">1.4.</span> <span class="toc-text">## 2. 安装nodejs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加国内镜像源"><span class="toc-number">1.5.</span> <span class="toc-text">添加国内镜像源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-安装Hexo"><span class="toc-number">1.6.</span> <span class="toc-text">## 3. 安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-注册Github账号创建个人仓库"><span class="toc-number">1.7.</span> <span class="toc-text">## 4. 注册Github账号创建个人仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-生成SSH添加到GitHub"><span class="toc-number">1.8.</span> <span class="toc-text">## 5. 生成SSH添加到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-将hexo部署到GitHub"><span class="toc-number">1.9.</span> <span class="toc-text">## 6. 将hexo部署到GitHub</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于malloc的内存分配"><span class="toc-number">1.</span> <span class="toc-text">关于malloc的内存分配</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><span class="toc-number">1.0.0.0.0.1.</span> <span class="toc-text">原文链接： https://blog.csdn.net/Fan0920/article/details/80999850</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题的引出："><span class="toc-number">1.1.</span> <span class="toc-text">问题的引出：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#答案："><span class="toc-number">1.2.</span> <span class="toc-text">答案：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#堆栈的知识扩充："><span class="toc-number">1.2.1.</span> <span class="toc-text">堆栈的知识扩充：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -470,7 +403,18 @@
     		&copy; 2019 S.Arbor
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+    
+    
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      		<span id="busuanzi_container_site_pv">
+                本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_container_site_uv">
+                本站访客数：<span id="busuanzi_value_site_uv"></span>人
+            </span>
+    
+    
       	</div>
     </div>
   </div>
@@ -546,15 +490,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -562,7 +498,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
               </li>
             
             <div class="clearfix"></div>

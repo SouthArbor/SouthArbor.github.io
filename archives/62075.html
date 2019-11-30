@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>关于malloc的内存分配 | 南有乔木</title>
+  <title>杨辉三角II | 南有乔木</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="杨辉三角II给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 示例: 输入: 3输出: [1,3,3,1]">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于malloc的内存分配">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E5%85%B3%E4%BA%8Emalloc%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D&#x2F;index.html">
+<meta property="og:title" content="杨辉三角II">
+<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;62075.html">
 <meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
+<meta property="og:description" content="杨辉三角II给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 示例: 输入: 3输出: [1,3,3,1]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T13:28:55.499Z">
+<meta property="og:updated_time" content="2019-11-27T13:26:00.228Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
@@ -58,7 +58,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives/index.html">归档</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -116,6 +118,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -135,12 +139,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,49 +161,46 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于malloc的内存分配" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-杨辉三角II" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      关于malloc的内存分配
+      杨辉三角II
     </h1>
   
 
         
-        <a href="/2019/11/24/%E5%85%B3%E4%BA%8Emalloc%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="archive-article-date">
-  	<time datetime="2019-11-24T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-24</time>
+        <a href="/archives/62075.html" class="archive-article-date">
+  	<time datetime="2019-11-26T12:26:58.119Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
 </a>
         
+    
+    
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+    
+    
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="关于malloc的内存分配"><a href="#关于malloc的内存分配" class="headerlink" title="关于malloc的内存分配"></a>关于malloc的内存分配</h1><p>​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。</p>
-<p>​    问题的引出：      </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？</span><br></pre></td></tr></table></figure>
-
+        <h1 id="杨辉三角II"><a href="#杨辉三角II" class="headerlink" title="杨辉三角II"></a>杨辉三角II</h1><p>给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。</p>
+<p>在杨辉三角中，每个数是它左上方和右上方的数的和。</p>
+<p>示例:</p>
+<p>输入: 3<br>输出: [1,3,3,1]</p>
 <a id="more"></a> 
 
-<p>C语言的数组的内存空间一定是连续的吗？</p>
-<p>按照我之前的想法，我认为这是可以申请成功的，malloc在给数组分配内存时会将内存块a和b连接起来共同作为这个数组的内存空间；（但事实是，我的想法是错误的）</p>
-<p>我之前一直认为： malloc 寻找内存，如果找不到到一个&gt;= 需求的连续内存空间，malloc就会将多个不连续的小内存块连接起来使用</p>
-<p>经过和群里的大佬的一番讨论，对malloc的内存分配机制有了更深入的了解：</p>
-<p>​    malloc 是用链表实现的</p>
-<p>​    内存以堆组成</p>
-<p>​    将可用的内存块连接为一个长长的列表的所谓空闲链表</p>
-<p>​    调用的时候就沿着链表找</p>
-<p>最后在一篇博文中找到了问题的答案：</p>
-<h6 id="原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><a href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850" class="headerlink" title="原文链接： https://blog.csdn.net/Fan0920/article/details/80999850"></a>原文链接： <a href="https://blog.csdn.net/Fan0920/article/details/80999850" target="_blank" rel="noopener">https://blog.csdn.net/Fan0920/article/details/80999850</a></h6><h2 id="问题的引出："><a href="#问题的引出：" class="headerlink" title="问题的引出："></a>问题的引出：</h2><p>堆包含一个链表来维护已用和空闲的内存块。在堆上新分配（用 new 或者 malloc）内存是从空闲的内存块中找到一些满足要求的合适块。所以可能让人觉得只要有很多不连续的零散的小区域，只要总数达到申请的内存块，就可以分配。</p>
-<p>  但事实上是不行的，这又让人觉得是不是零散的内存块不能连接成一个大的空间，而必须要一整块连续的内存空间才能申请成功呢。</p>
-<h2 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：</h2><ol>
-<li>申请和释放许多小的块可能会产生如下状态：在已用块之间存在很多小的空闲块。进而申请大块内存失败，虽然空闲块的总和足够，但是空闲的小块是零散的，不能满足申请的大小。这叫做“堆碎片”。</li>
-<li>当旁边有空闲块的已用块被释放时，新的空闲块会与相连的空闲块合并成一个大的空闲块，这样就可以有效的减少”堆碎片”的产生。</li>
-<li>堆分配的空间在<strong>逻辑地址上是连续的</strong>，但在<strong>物理地址上是不连续的</strong>（因为采用了页式内存管理,windows下有段机制、分页机制），如果逻辑地址空间上已经没有一段连续且足够大的空间，则分配内存失败。</li>
-</ol>
-<h3 id="堆栈的知识扩充："><a href="#堆栈的知识扩充：" class="headerlink" title="堆栈的知识扩充："></a>堆栈的知识扩充：</h3><p>原文地址： <a href="https://blog.csdn.net/jin13277480598/article/details/54406980" target="_blank" rel="noopener">https://blog.csdn.net/jin13277480598/article/details/54406980</a> </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>定义一个一维数组保存结果</p>
+<p>杨辉三角第n行有n+1个数，</p>
+<p>从第一行开始计算杨辉三角的值，保存在一维数组中，后续行的值根据上一行的结果，并将结果覆盖到一维数组。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">getRow</span><span class="params">(<span class="keyword">int</span> rowIndex, <span class="keyword">int</span>* returnSize)</span></span>&#123;</span><br><span class="line">    *returnSize = rowIndex + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span>* num = (<span class="keyword">int</span>*) <span class="built_in">malloc</span> ((rowIndex + <span class="number">1</span>) * <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= rowIndex;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = i;j &gt;= <span class="number">0</span>;j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(j == <span class="number">0</span> || j == i) num[j] = <span class="number">1</span>;</span><br><span class="line">           <span class="keyword">else</span> num[j] = num[j] + num[j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -237,7 +240,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">leetcode</a>
         		</li>
       		
 		</ul>
@@ -249,7 +252,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/堆栈//" class="article-tag-list-link color3">堆栈</a>
+        			<a href="/categories/leetcode//" class="article-tag-list-link color4">leetcode</a>
         		</li>
       		
 		</ul>
@@ -304,7 +307,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/2019/11/24/%E5%85%B3%E4%BA%8Emalloc%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/62075.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +321,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/24/tip/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/archives/19353.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          tip
+          字符串相加
         
       </div>
     </a>
   
   
-    <a href="/2019/11/24/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二叉树的先序遍历</div>
+    <a href="/archives/3601.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">杨辉三角</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -356,7 +359,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于malloc的内存分配"><span class="toc-number">1.</span> <span class="toc-text">关于malloc的内存分配</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><span class="toc-number">1.0.0.0.0.1.</span> <span class="toc-text">原文链接： https://blog.csdn.net/Fan0920/article/details/80999850</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题的引出："><span class="toc-number">1.1.</span> <span class="toc-text">问题的引出：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#答案："><span class="toc-number">1.2.</span> <span class="toc-text">答案：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#堆栈的知识扩充："><span class="toc-number">1.2.1.</span> <span class="toc-text">堆栈的知识扩充：</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#杨辉三角II"><span class="toc-number">1.</span> <span class="toc-text">杨辉三角II</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.0.1.</span> <span class="toc-text">思路</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -388,7 +391,18 @@
     		&copy; 2019 S.Arbor
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+    
+    
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      		<span id="busuanzi_container_site_pv">
+                本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_container_site_uv">
+                本站访客数：<span id="busuanzi_value_site_uv"></span>人
+            </span>
+    
+    
       	</div>
     </div>
   </div>
@@ -464,15 +478,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -480,7 +486,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
               </li>
             
             <div class="clearfix"></div>
