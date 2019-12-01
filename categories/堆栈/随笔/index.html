@@ -6,19 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>scanf返回值 | 南有乔木</title>
+  <title>Category: 随笔 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="scanf返回值12345678#include &amp;lt;stdio.h&amp;gt;int main()&amp;#123;   int i, j;   while(scanf(&quot;%d%d&quot;, &amp;amp;i, &amp;amp;j) == 2)      printf(&quot;%d\n&quot;, i + j);   return 0;&amp;#125;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="scanf返回值">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;42431.html">
-<meta property="og:site_name" content="南有乔木">
-<meta property="og:description" content="scanf返回值12345678#include &amp;lt;stdio.h&amp;gt;int main()&amp;#123;   int i, j;   while(scanf(&quot;%d%d&quot;, &amp;amp;i, &amp;amp;j) == 2)      printf(&quot;%d\n&quot;, i + j);   return 0;&amp;#125;">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="S.Arbor的个人博客">
+<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;categories&#x2F;%E5%A0%86%E6%A0%88&#x2F;%E9%9A%8F%E7%AC%94&#x2F;index.html">
+<meta property="og:site_name" content="S.Arbor的个人博客">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-30T03:19:07.074Z">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -56,8 +53,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/categories">分类</a></li>
 	        
 				<li><a href="/archives">归档</a></li>
 	        
@@ -117,8 +112,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -138,14 +131,12 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
+					<li style="width: 50%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -160,217 +151,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-scanf返回值" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      scanf返回值
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/archives/37683.html" class="archive-article-date">
+  	<time datetime="2019-11-24T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/archives/37683.html">关于malloc的内存分配</a>
     </h1>
   
 
-        
-        <a href="/archives/42431.html" class="archive-article-date">
-  	<time datetime="2019-11-29T13:38:39.809Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
-</a>
-        
-    
-    
-        
-          <span class="archive-article-date">
-              阅读量 <span id="busuanzi_value_page_pv"></span>
-          </span>
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="scanf返回值"><a href="#scanf返回值" class="headerlink" title="scanf返回值"></a>scanf返回值</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i, j;</span><br><span class="line">   <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;i, &amp;j) == <span class="number">2</span>)</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i + j);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<a id="more"></a>
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/堆栈//" class="article-tag-list-link color3">堆栈</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/堆栈/随笔//" class="article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<p>while循环的判断条件是scanf(“%d%d”, &amp;i, &amp;j) == 2,第一次见到这种用法，记录下来。</p>
-<ol>
-<li>scanf 函数是有返回值的，它的返回值可以分成三种情况<br>   1) 正整数，表示正确输入参数的个数。例如执行 scanf(“%d %d”, &amp;a, &amp;b);<br>   如果用户输入”3 4”，可以正确输入，返回2（正确输入了两个变量）；<br>   如果用户输入”3,4”，可以正确输入a，无法输入b，返回1（正确输入了一个变量）。<br> 2) 0，表示用户的输入不匹配，无法正确输入任何值。如上例，用户如果输入”,3 4”，返回0。<br> 3) EOF，这是在stdio.h里面定义的常量（通常值为-1），表示输入流已经结束。在Windows下，用户按下CTRL+Z（会看到一个^Z字符）再按下回车（可能需要重复2次），就表示输入结束；Linux/Unix下使用CTRL+D表示输入结束。</li>
-</ol>
-<p>所以可以使用下面的代码来处理输入：<br>while (scanf(“%s %c %c”, str, &amp;oldchar, &amp;newchar) == 3) /* 或!= EOF , 但前者更好 */<br>{<br>    ; //处理<br>}</p>
-<ol start="2">
-<li><p>为什么前面 scanf 的格式串里面，%s和%c中间需要空格呢？<br> 那是因为如果没空格的话。。。oldchar输入的就是空格了= =.</p>
-</li>
-<li><p>顺便说一下，printf的返回值是输出的字符数，例如，printf(“1234”)的返回值是4，而printf(“1234\n”)的返回值是5。</p>
-</li>
-</ol>
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/42431.html" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
   
   
-    <a href="/archives/48650.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二叉树的后序遍历</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#scanf返回值"><span class="toc-number">1.</span> <span class="toc-text">scanf返回值</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  
-      <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: 'your clientID',
-  clientSecret: 'your clientSecret',
-  repo: 'git_comment',
-  owner: 'findtheonlyway',
-  admin: ['erbiduo'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
+    
 
 
           </div>
@@ -404,10 +253,10 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
@@ -474,15 +323,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

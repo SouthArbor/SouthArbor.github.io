@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>关于malloc的内存分配 | 南有乔木</title>
+  <title>关于malloc的内存分配 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于malloc的内存分配">
 <meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;37683.html">
-<meta property="og:site_name" content="南有乔木">
+<meta property="og:site_name" content="S.Arbor的个人博客">
 <meta property="og:description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T13:28:55.499Z">
+<meta property="og:updated_time" content="2019-12-01T11:42:48.794Z">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="南有乔木" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -57,8 +57,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/categories">分类</a></li>
 	        
 				<li><a href="/archives">归档</a></li>
 	        
@@ -118,8 +116,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -139,14 +135,12 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
+					<li style="width: 50%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -265,6 +259,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="/categories/堆栈//" class="article-tag-list-link color3">堆栈</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/堆栈/随笔//" class="article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -399,11 +397,11 @@
 
 <script>
 var gitalk = new Gitalk({
-  clientID: 'your clientID',
-  clientSecret: 'your clientSecret',
-  repo: 'git_comment',
-  owner: 'findtheonlyway',
-  admin: ['erbiduo'],
+  clientID: 'e9b7df6b391aa2901a7e',
+  clientSecret: 'becd9776d509eb7608eb6b734484e7a9be55888b',
+  repo: 'SouthArbor.github.io',
+  owner: 'SouthArbor',
+  admin: ['SouthArbor'],
   id: md5(window.location.pathname),
   distractionFreeMode: true
 })
@@ -514,15 +512,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
