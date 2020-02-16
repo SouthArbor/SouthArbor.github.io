@@ -153,6 +153,1194 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-C 中printf无法输出问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/288d0f5b.html">C 中printf无法输出问题</a>
+    </h1>
+  
+
+        
+        <a href="/archives/288d0f5b.html" class="archive-article-date">
+  	<time datetime="2020-02-16T07:27:44.377Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C-中printf无法输出问题"><a href="#C-中printf无法输出问题" class="headerlink" title="C 中printf无法输出问题"></a>C 中printf无法输出问题</h1><p>在c++编程过程中遇到printf()函数无法输出的问题，但是代码没有问题，使用puts()函数可以正常输出。</p>
+<p>上网查了一下</p>
+<p>原因为系统缓冲区问题。有三个解决办法：</p>
+<p>1.添加换行符</p>
+<p>printf(“XXXXXXX \n”);</p>
+<p>2.输出后手动刷新系统缓冲区</p>
+<p>fflush(stdout);</p>
+<p>3.预先设定无缓冲区</p>
+<p>setvbuf(stdout, NULL, _IONBF, 0);</p>
+<p>原文链接：<a href="https://blog.csdn.net/gengyiping18/article/details/102729331" target="_blank" rel="noopener">https://blog.csdn.net/gengyiping18/article/details/102729331</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/288d0f5b.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql查询练习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/a08a31.html">mysql查询练习</a>
+    </h1>
+  
+
+        
+        <a href="/archives/a08a31.html" class="archive-article-date">
+  	<time datetime="2020-02-13T05:15:43.817Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-13</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mysql查询练习"><a href="#mysql查询练习" class="headerlink" title="mysql查询练习"></a>mysql查询练习</h1><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><p>创建查询练习数据库selecttext。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> selecttext;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> selecttext;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><h3 id="学生表"><a href="#学生表" class="headerlink" title="学生表"></a>学生表</h3><ul>
+<li>student</li>
+</ul>
+<ol>
+<li>学号</li>
+<li>姓名</li>
+<li>性别</li>
+<li>出生年月生日</li>
+<li>所在班级</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">	sno <span class="built_in">varchar</span>(<span class="number">20</span>) primary <span class="keyword">key</span>,</span><br><span class="line">    sname <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    ssex <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    sbirthday datetime,</span><br><span class="line">    <span class="keyword">class</span> vaichar(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="成绩表"><a href="#成绩表" class="headerlink" title="成绩表"></a>成绩表</h3><ul>
+<li>score</li>
+</ul>
+<ol>
+<li>学号</li>
+<li>课程号</li>
+<li>成绩</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> score(</span><br><span class="line">	sno <span class="built_in">varchar</span>(<span class="number">20</span>) primary <span class="keyword">key</span>,	</span><br><span class="line">    cno <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    degree <span class="built_in">decimal</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(cno) refenrence course(cno)</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(sno) refenrence student(sno)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="教师表"><a href="#教师表" class="headerlink" title="教师表"></a>教师表</h3><ul>
+<li>teacher</li>
+</ul>
+<ol>
+<li>教师编号</li>
+<li>教师名字</li>
+<li>教师性别</li>
+<li>出生年月日</li>
+<li>职称</li>
+<li>所在部门</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> teacher(</span><br><span class="line">	tno <span class="built_in">varchar</span>(<span class="number">20</span>) primary <span class="keyword">key</span>,</span><br><span class="line">    tname <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    tsex <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    tbirthday datetime，</span><br><span class="line">    prof <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    depart <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="课程表"><a href="#课程表" class="headerlink" title="课程表"></a>课程表</h2><ul>
+<li>course</li>
+</ul>
+<ol>
+<li>课程号</li>
+<li>课程名称</li>
+<li>教师编号</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> course(</span><br><span class="line">	cno <span class="built_in">varchar</span>(<span class="number">20</span>) primary <span class="keyword">key</span>,</span><br><span class="line">    cname <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    tno <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(tno) <span class="keyword">references</span> teacher(tno)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="查询练习"><a href="#查询练习" class="headerlink" title="查询练习"></a>查询练习</h2><h3 id="1到10"><a href="#1到10" class="headerlink" title="1到10"></a>1到10</h3><h4 id="查询student表的所有记录。"><a href="#查询student表的所有记录。" class="headerlink" title="查询student表的所有记录。"></a>查询student表的所有记录。</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查询student表中所有记录的-sname、ssex和class列"><a href="#查询student表中所有记录的-sname、ssex和class列" class="headerlink" title="查询student表中所有记录的 sname、ssex和class列"></a>查询student表中所有记录的 sname、ssex和class列</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname,ssex,<span class="keyword">class</span> <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查询教师所有的单位级不重复的depart列"><a href="#查询教师所有的单位级不重复的depart列" class="headerlink" title="查询教师所有的单位级不重复的depart列"></a>查询教师所有的单位级不重复的depart列</h3><ul>
+<li>distinct : 排重</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> depart <span class="keyword">from</span> teacher;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询score表中成绩在60-到80之间所有记录"><a href="#查询score表中成绩在60-到80之间所有记录" class="headerlink" title="查询score表中成绩在60 到80之间所有记录"></a>查询score表中成绩在60 到80之间所有记录</h3><ul>
+<li>between [条件] and [条件] : 设置查询区间</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> degree <span class="keyword">between</span> <span class="number">60</span> <span class="keyword">and</span> <span class="number">80</span>;</span><br></pre></td></tr></table></figure>
+
+<p>直接使用运算符比较</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> degree &gt; <span class="number">60</span> <span class="keyword">and</span> degree &lt; <span class="number">80</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询score表中成绩为85-86或88的记录"><a href="#查询score表中成绩为85-86或88的记录" class="headerlink" title="查询score表中成绩为85,86或88的记录"></a>查询score表中成绩为85,86或88的记录</h3><ul>
+<li>表示或者关系的查询: in([条件])</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> degree <span class="keyword">in</span>(<span class="number">85</span>,<span class="number">86</span>,<span class="number">88</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询student表中’95031’班或性别为‘女’的同学记录"><a href="#查询student表中’95031’班或性别为‘女’的同学记录" class="headerlink" title="查询student表中’95031’班或性别为‘女’的同学记录"></a>查询student表中’95031’班或性别为‘女’的同学记录</h3><ul>
+<li>or 表示或者</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span> <span class="keyword">or</span> ssex = <span class="string">'女'</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="以class降序查询student表中的所有记录。"><a href="#以class降序查询student表中的所有记录。" class="headerlink" title="以class降序查询student表中的所有记录。"></a>以class降序查询student表中的所有记录。</h3><ul>
+<li><p>order by : 排序</p>
+</li>
+<li><p>降序 ： desc</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">class</span> <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>升序(默认) : asc</li>
+</ul>
+<p>默认就是升序排列，asc可以不写</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">class</span> <span class="keyword">asc</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">class</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="以cno升序，degree降序查询score表中的所有记录。"><a href="#以cno升序，degree降序查询score表中的所有记录。" class="headerlink" title="以cno升序，degree降序查询score表中的所有记录。"></a>以cno升序，degree降序查询score表中的所有记录。</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">order</span> <span class="keyword">by</span> cno <span class="keyword">asc</span>,degree <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询‘95031’班的学生人数。"><a href="#查询‘95031’班的学生人数。" class="headerlink" title="查询‘95031’班的学生人数。"></a>查询‘95031’班的学生人数。</h3><ul>
+<li>统计：count() </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*) from student where class = &apos;95031&apos;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询score表中的最高分的学生学号和课程号。（子查询或者排序）"><a href="#查询score表中的最高分的学生学号和课程号。（子查询或者排序）" class="headerlink" title="查询score表中的最高分的学生学号和课程号。（子查询或者排序）"></a>查询score表中的最高分的学生学号和课程号。（子查询或者排序）</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cno <span class="keyword">from</span> score <span class="keyword">where</span> degree = (<span class="keyword">select</span> <span class="keyword">max</span>(degree) <span class="keyword">from</span> score);</span><br></pre></td></tr></table></figure>
+
+<p>找到最高分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">max</span>(degree) <span class="keyword">from</span> score;</span><br></pre></td></tr></table></figure>
+
+<p>找最高分的sno和cno</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cno <span class="keyword">from</span> <span class="keyword">where</span> degree = (<span class="keyword">select</span> <span class="keyword">max</span>(degree) <span class="keyword">from</span> score);</span><br></pre></td></tr></table></figure>
+
+<p>利用排序的做法：</p>
+<ul>
+<li>limit [数字],[数字]： 第一个数字表示从多少开始，第二个数字表示查多少条</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cno <span class="keyword">from</span> score <span class="keyword">order</span> <span class="keyword">by</span> degree <span class="keyword">desc</span> <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分组计算平均成绩"><a href="#分组计算平均成绩" class="headerlink" title="分组计算平均成绩"></a>分组计算平均成绩</h3><h4 id="查询每门课的平均成绩"><a href="#查询每门课的平均成绩" class="headerlink" title="查询每门课的平均成绩"></a>查询每门课的平均成绩</h4><ul>
+<li>avg() : 计算平均值</li>
+</ul>
+<p>查询某一门课的平均成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">avg</span>(degree) <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'3-105'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如何一条语句查询每门课的平均成绩？</p>
+<ul>
+<li>group by ：按组排列</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">avg</span>(degree) <span class="keyword">from</span> score <span class="keyword">where</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分组条件与模糊查询"><a href="#分组条件与模糊查询" class="headerlink" title="分组条件与模糊查询"></a>分组条件与模糊查询</h3><h4 id="查询score表中至少有两名学生选修的并以3开头的课程的平均分数"><a href="#查询score表中至少有两名学生选修的并以3开头的课程的平均分数" class="headerlink" title="查询score表中至少有两名学生选修的并以3开头的课程的平均分数"></a>查询score表中至少有两名学生选修的并以3开头的课程的平均分数</h4><ul>
+<li><p>having ： 和where用法类似</p>
+</li>
+<li><p>like : 模糊查询</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,<span class="keyword">avg</span>(degree) <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> cno </span><br><span class="line"><span class="keyword">having</span> <span class="keyword">count</span>(cno)&gt;=<span class="number">2</span> </span><br><span class="line"><span class="keyword">and</span> cno <span class="keyword">like</span> <span class="string">'3%'</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="查询范围的两种方式"><a href="#查询范围的两种方式" class="headerlink" title="查询范围的两种方式"></a>查询范围的两种方式</h3><h4 id="查询分数大于10，小于90的sno列。"><a href="#查询分数大于10，小于90的sno列。" class="headerlink" title="查询分数大于10，小于90的sno列。"></a>查询分数大于10，小于90的sno列。</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,degree <span class="keyword">from</span> score <span class="keyword">where</span> degree &gt; <span class="number">70</span> <span class="keyword">and</span> degree &lt; <span class="number">90</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><h4 id="查询所有学生的sname-、cno-、-degree-列"><a href="#查询所有学生的sname-、cno-、-degree-列" class="headerlink" title="查询所有学生的sname 、cno 、 degree 列"></a>查询所有学生的sname 、cno 、 degree 列</h4><p>多表查询找多表中共同拥有的字段，即外键约束</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname,cno,degree <span class="keyword">from</span> student,score</span><br><span class="line"><span class="keyword">where</span> student.sno = score.sno;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询所有学生的sno、cname-和-defree-列"><a href="#查询所有学生的sno、cname-和-defree-列" class="headerlink" title="查询所有学生的sno、cname 和 defree 列"></a>查询所有学生的sno、cname 和 defree 列</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cname,degree <span class="keyword">from</span> course,score</span><br><span class="line"><span class="keyword">where</span> course.cno = score.cno;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询所有学生的sname、cname、和degree列"><a href="#查询所有学生的sname、cname、和degree列" class="headerlink" title="查询所有学生的sname、cname、和degree列"></a>查询所有学生的sname、cname、和degree列</h4><p>三表连接查询</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname,cname,degree <span class="keyword">from</span> student,course,score </span><br><span class="line"><span class="keyword">where</span> student.sno = score.sno <span class="keyword">and</span> score.cno = course.cno;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询选修某课程的同学人数多于5人的教师姓名"><a href="#查询选修某课程的同学人数多于5人的教师姓名" class="headerlink" title="查询选修某课程的同学人数多于5人的教师姓名"></a>查询选修某课程的同学人数多于5人的教师姓名</h4><ul>
+<li><p>group by 和 having 配合使用，实现先分组再执行having后条件</p>
+<p>先在成绩表中筛选出选修人数多于5人的课程</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">having</span> <span class="keyword">count</span>(cno)&gt;<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的课程号作为条件，在课程表中查询教师编号</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tno <span class="keyword">from</span> course </span><br><span class="line"><span class="keyword">where</span> cno <span class="keyword">in</span> (<span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">having</span> <span class="keyword">count</span>(cno)&gt;<span class="number">5</span>;);</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的教师编号作为条件（套娃真好玩），在教师表中查询教师姓名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tname <span class="keyword">from</span> teacher </span><br><span class="line"><span class="keyword">where</span> tno <span class="keyword">in</span> (<span class="keyword">select</span> tno <span class="keyword">from</span> course <span class="keyword">where</span> cno <span class="keyword">in</span> (<span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">having</span> <span class="keyword">count</span>(cno)&gt;<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><h4 id="查询选修‘3-105’课程的成绩高于‘109’号同学的所有同学"><a href="#查询选修‘3-105’课程的成绩高于‘109’号同学的所有同学" class="headerlink" title="查询选修‘3-105’课程的成绩高于‘109’号同学的所有同学"></a>查询选修‘3-105’课程的成绩高于‘109’号同学的所有同学</h4><p>化繁为简</p>
+<p>先在成绩表中查询109号同学‘3-105’课程的的成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'3-105'</span> <span class="keyword">and</span> sno = <span class="string">'109'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后将109号同学的成绩作为条件，在成绩表中查询选修了‘3-105’并且成绩高于109号的所有同学</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">where</span> degree &gt; (<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'3-105'</span> <span class="keyword">and</span> sno = <span class="string">'109'</span>) <span class="keyword">and</span> cno = <span class="string">'3-105'</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询成绩高于学号为‘109’、课程号为‘3-105’的成绩的所有记录"><a href="#查询成绩高于学号为‘109’、课程号为‘3-105’的成绩的所有记录" class="headerlink" title="查询成绩高于学号为‘109’、课程号为‘3-105’的成绩的所有记录"></a>查询成绩高于学号为‘109’、课程号为‘3-105’的成绩的所有记录</h4><p>化繁为简</p>
+<p>查询109号同学‘3-105’课程的的成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'3-105'</span> <span class="keyword">and</span> sno = <span class="string">'109'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的成绩作为条件，在成绩表中查询所有成绩高于“109号同学‘3-105’课程的的成绩”的所有记录</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">where</span> degree &gt; (<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'3-105'</span> <span class="keyword">and</span> sno = <span class="string">'109'</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询出“计算机系”教师所教课程的成绩表"><a href="#查询出“计算机系”教师所教课程的成绩表" class="headerlink" title="查询出“计算机系”教师所教课程的成绩表"></a>查询出“计算机系”教师所教课程的成绩表</h4><p>先在教师表中查询出“计算机系”的教师的教师编号tno</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的教师编号作为条件，在课程表中查询出课程号</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno <span class="keyword">from</span> course </span><br><span class="line"><span class="keyword">where</span> tno <span class="keyword">in</span> (<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后讲得到的课程号作为条件，在成绩表中查询课程的对应的所有成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> degree <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">where</span> cno <span class="keyword">in</span> (<span class="keyword">select</span> cno <span class="keyword">from</span> course <span class="keyword">where</span> tno <span class="keyword">in</span> (<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>));</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询所有任课教师的tname和depart"><a href="#查询所有任课教师的tname和depart" class="headerlink" title="查询所有任课教师的tname和depart"></a>查询所有任课教师的tname和depart</h4><p>先在课程表中查出任课老师的tno</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tno <span class="keyword">from</span> course;</span><br></pre></td></tr></table></figure>
+
+<p>然后在教师表中查询教师的tname、depart</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tname,depart <span class="keyword">from</span> teacher <span class="keyword">where</span> tno <span class="keyword">in</span> (<span class="keyword">select</span> tno <span class="keyword">from</span> course);</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询‘男’教师及其所上的课程。"><a href="#查询‘男’教师及其所上的课程。" class="headerlink" title="查询‘男’教师及其所上的课程。"></a>查询‘男’教师及其所上的课程。</h4><p>先在教师表中找出‘男’教师的tno</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tsex = <span class="string">'男'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的tno作为条件，在课程表中找到‘男’教师所上的课程</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> course <span class="keyword">where</span> tno <span class="keyword">in</span> (<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tsex = <span class="string">'男'</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询和‘李军’同性别的所有同学的sname"><a href="#查询和‘李军’同性别的所有同学的sname" class="headerlink" title="查询和‘李军’同性别的所有同学的sname"></a>查询和‘李军’同性别的所有同学的sname</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname <span class="keyword">from</span> student <span class="keyword">where</span> ssex = (<span class="keyword">select</span> ssex <span class="keyword">from</span> student <span class="keyword">where</span> sname = <span class="string">'李军'</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询和‘李军’同性别且同班的所有同学的sname"><a href="#查询和‘李军’同性别且同班的所有同学的sname" class="headerlink" title="查询和‘李军’同性别且同班的所有同学的sname"></a>查询和‘李军’同性别且同班的所有同学的sname</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname <span class="keyword">from</span> student <span class="keyword">where</span> ssex = (<span class="keyword">select</span> ssex <span class="keyword">from</span> student <span class="keyword">where</span> sname = <span class="string">'李军'</span>) <span class="keyword">and</span> <span class="keyword">class</span> = (<span class="keyword">select</span> <span class="keyword">class</span> <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">where</span> sname = <span class="string">'李军'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>查询所有选修’计算机导论‘课程的’男‘同学的成绩表。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> cno = (<span class="keyword">select</span> cno <span class="keyword">from</span> course <span class="keyword">where</span> cname = <span class="string">'计算机导论'</span>) <span class="keyword">and</span> sno <span class="keyword">in</span> (<span class="keyword">select</span> sno <span class="keyword">from</span> student <span class="keyword">where</span> ssex = <span class="string">'男'</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="子查询加分组求平均分"><a href="#子查询加分组求平均分" class="headerlink" title="子查询加分组求平均分"></a>子查询加分组求平均分</h3><h4 id="查询‘95031’班的每门课的平均分"><a href="#查询‘95031’班的每门课的平均分" class="headerlink" title="查询‘95031’班的每门课的平均分"></a>查询‘95031’班的每门课的平均分</h4><p>大问题分化为小问题</p>
+<p>查询得到‘95031’班学生的学号</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>用得到的学号作为查询成绩表的条件,加上group by cno按课程号分组</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,<span class="keyword">avg</span>(degree) <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">where</span> sno <span class="keyword">in</span> (<span class="keyword">select</span> sno <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>) </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> cno;</span><br></pre></td></tr></table></figure>
+
+<h3 id="条件加分组筛选"><a href="#条件加分组筛选" class="headerlink" title="条件加分组筛选"></a>条件加分组筛选</h3><h4 id="查询至少有2名男生的班号"><a href="#查询至少有2名男生的班号" class="headerlink" title="查询至少有2名男生的班号"></a>查询至少有2名男生的班号</h4><p>查询学生表中ssex为‘男‘的学生的班级，并将记录按班号分组，将男生数量大于1个的班号展示出来</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">class</span> <span class="keyword">from</span> student a <span class="keyword">where</span> ssex = <span class="string">'男'</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">class</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="max函数与子查询"><a href="#max函数与子查询" class="headerlink" title="max函数与子查询"></a>max函数与子查询</h3><h4 id="查询最高分同学的sno、cno、和degree列"><a href="#查询最高分同学的sno、cno、和degree列" class="headerlink" title="查询最高分同学的sno、cno、和degree列"></a>查询最高分同学的sno、cno、和degree列</h4><p>先查出最高成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">max</span>(degree) <span class="keyword">from</span> score;</span><br></pre></td></tr></table></figure>
+
+<p>然后将其作为条件，查出最高分同学的sno、cno、和degree列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> degree = (<span class="keyword">select</span> <span class="keyword">max</span>(degree) <span class="keyword">from</span> score);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="year函数与带in关键字的子查询"><a href="#year函数与带in关键字的子查询" class="headerlink" title="year函数与带in关键字的子查询"></a>year函数与带in关键字的子查询</h3><h4 id="查询与学号为108、101的同学同年出生的所有学生的sno、sname、sbirthday列"><a href="#查询与学号为108、101的同学同年出生的所有学生的sno、sname、sbirthday列" class="headerlink" title="查询与学号为108、101的同学同年出生的所有学生的sno、sname、sbirthday列"></a>查询与学号为108、101的同学同年出生的所有学生的sno、sname、sbirthday列</h4><p>year() : 取出日期格式中的year</p>
+<p>先得到两位同学的出生年份</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">year</span>(sbirthday) <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span> (<span class="number">108</span>,<span class="number">101</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的年份作为条件，查询学生表中和两位同学同年出生的所有学生</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">year</span>(sbirthday) <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">year</span>(sbirthday) <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span> (<span class="number">108</span>,<span class="number">101</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="多层嵌套子查询"><a href="#多层嵌套子查询" class="headerlink" title="多层嵌套子查询"></a>多层嵌套子查询</h3><h4 id="查询“张旭”教师任课的学生成绩"><a href="#查询“张旭”教师任课的学生成绩" class="headerlink" title="查询“张旭”教师任课的学生成绩"></a>查询“张旭”教师任课的学生成绩</h4><p>首先在教师表中查询到“张旭”教师的教师编号</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tname = <span class="string">'张旭'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的教师编号作为条件，在课程表中查询张旭老师任课的课程的课程号</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno <span class="keyword">from</span> course </span><br><span class="line"><span class="keyword">where</span> tno = (<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tname = <span class="string">'张旭'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的课程号作为条件(???套娃警告!!!)，在成绩表中查询选修了这门课的学生的成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> degree <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">where</span> cno <span class="keyword">in</span> (<span class="keyword">select</span> cno <span class="keyword">from</span> course <span class="keyword">where</span> tno = (<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tname = <span class="string">'张旭'</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="in表示或者关系"><a href="#in表示或者关系" class="headerlink" title="in表示或者关系"></a>in表示或者关系</h3><h4 id="查询‘95031’班和‘95033’班全体学生的记录"><a href="#查询‘95031’班和‘95033’班全体学生的记录" class="headerlink" title="查询‘95031’班和‘95033’班全体学生的记录"></a>查询‘95031’班和‘95033’班全体学生的记录</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> <span class="keyword">in</span> (<span class="string">'95033'</span>,<span class="string">'95031'</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="where-条件查询"><a href="#where-条件查询" class="headerlink" title="where 条件查询"></a>where 条件查询</h3><h4 id="查询存在有85分以上成绩的课程cno"><a href="#查询存在有85分以上成绩的课程cno" class="headerlink" title="查询存在有85分以上成绩的课程cno"></a>查询存在有85分以上成绩的课程cno</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> cno <span class="keyword">from</span> score <span class="keyword">where</span> degree&gt;<span class="number">85</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="union-和-not-in-的使用"><a href="#union-和-not-in-的使用" class="headerlink" title="union 和 not in 的使用"></a>union 和 not in 的使用</h3><h4 id="查询‘计算机系’与‘电子工程系’不同职称的教师的tname和prof"><a href="#查询‘计算机系’与‘电子工程系’不同职称的教师的tname和prof" class="headerlink" title="查询‘计算机系’与‘电子工程系’不同职称的教师的tname和prof"></a>查询‘计算机系’与‘电子工程系’不同职称的教师的tname和prof</h4><p>首先查询出‘计算机系’和’电子工程系‘各自拥有的职称</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后将得到的‘计算机系’职称作为条件，查询出‘电子工程系’没有的职称</p>
+<ul>
+<li>not in ： 不在，不被包含</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>同法，得到‘电子工程系’职称中，‘计算机系’没有的职称</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>最后将俩个查询结果联合起来，就得到我们想要的结果</p>
+<ul>
+<li>union : 求并集</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>)</span><br><span class="line"><span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="any表示至少一个，desc降序"><a href="#any表示至少一个，desc降序" class="headerlink" title="any表示至少一个，desc降序"></a>any表示至少一个，desc降序</h3><h4 id="查询选修编号为‘3-105’课程且成绩高于任意选修编号为‘3-245’同学成绩的同学的cno、sno、degree，并按degree从高到低排序"><a href="#查询选修编号为‘3-105’课程且成绩高于任意选修编号为‘3-245’同学成绩的同学的cno、sno、degree，并按degree从高到低排序" class="headerlink" title="查询选修编号为‘3-105’课程且成绩高于任意选修编号为‘3-245’同学成绩的同学的cno、sno、degree，并按degree从高到低排序"></a>查询选修编号为‘3-105’课程且成绩高于任意选修编号为‘3-245’同学成绩的同学的cno、sno、degree，并按degree从高到低排序</h4><p> 先查询出‘3-245’课程的所有成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'1-245'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后查询出‘3-105’课程成绩，大于‘3-245’课程中的任一成绩，就是符合要求的成绩</p>
+<ul>
+<li>any : 任意一个</li>
+<li>order by : 排序（升序：asc，降序：desc）</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,sno,degree <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">where</span> cno = <span class="string">'3-105'</span> <span class="keyword">and</span> degree &gt; <span class="keyword">any</span>(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'1-245'</span>) <span class="keyword">order</span> <span class="keyword">by</span> degree <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="all表示所有"><a href="#all表示所有" class="headerlink" title="all表示所有"></a>all表示所有</h3><h4 id="查询选修编号为‘3-105’课程且成绩高于所有选修编号为‘3-245’同学成绩的同学的cno、sno、degree"><a href="#查询选修编号为‘3-105’课程且成绩高于所有选修编号为‘3-245’同学成绩的同学的cno、sno、degree" class="headerlink" title="查询选修编号为‘3-105’课程且成绩高于所有选修编号为‘3-245’同学成绩的同学的cno、sno、degree"></a>查询选修编号为‘3-105’课程且成绩高于所有选修编号为‘3-245’同学成绩的同学的cno、sno、degree</h4><p>这题只需要吧上题稍作修改就可以，把条件‘任一‘换成’所有，全部‘就可以了，而且不需要排序</p>
+<ul>
+<li>all : 所有，全部</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,sno,degree <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">where</span> cno = <span class="string">'3-105'</span> <span class="keyword">and</span> degree &gt; <span class="keyword">all</span>(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno = <span class="string">'1-245'</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="as取别名"><a href="#as取别名" class="headerlink" title="as取别名"></a>as取别名</h3><h4 id="查询所有教师和同学的name、sex、birthday"><a href="#查询所有教师和同学的name、sex、birthday" class="headerlink" title="查询所有教师和同学的name、sex、birthday"></a>查询所有教师和同学的name、sex、birthday</h4><ul>
+<li>as : 取别名</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname <span class="keyword">as</span> <span class="keyword">name</span>,ssex <span class="keyword">as</span> sex,sbirthday <span class="keyword">as</span> birthday <span class="keyword">from</span> student</span><br><span class="line"><span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> tname,tsex,tbirthday <span class="keyword">from</span> teacher;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询所有’女‘教师和’女‘同学的name、sex、birthday"><a href="#查询所有’女‘教师和’女‘同学的name、sex、birthday" class="headerlink" title="查询所有’女‘教师和’女‘同学的name、sex、birthday"></a>查询所有’女‘教师和’女‘同学的name、sex、birthday</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname <span class="keyword">as</span> <span class="keyword">name</span>,ssex <span class="keyword">as</span> sex,sbirthday <span class="keyword">as</span> birthday <span class="keyword">from</span> student <span class="keyword">where</span> ssex = <span class="string">'女'</span> </span><br><span class="line"><span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> tname,tsex,tbirthday <span class="keyword">from</span> teacher <span class="keyword">where</span> tsex = <span class="string">'女'</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="复制表数据做条件查询"><a href="#复制表数据做条件查询" class="headerlink" title="复制表数据做条件查询"></a>复制表数据做条件查询</h3><h4 id="查询成绩比该课程平均成绩低的同学的成绩表。"><a href="#查询成绩比该课程平均成绩低的同学的成绩表。" class="headerlink" title="查询成绩比该课程平均成绩低的同学的成绩表。"></a>查询成绩比该课程平均成绩低的同学的成绩表。</h4><p> 查询出每门课的平均成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">avg</span>(degree) <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno;</span><br></pre></td></tr></table></figure>
+
+<p>此时相当于两重for循环，当内循环的cno和外循环的cno相等时，将内循环的成绩加入平均成绩的计算</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score a <span class="keyword">where</span> degree &lt; (<span class="keyword">select</span> <span class="keyword">avg</span>(degree) <span class="keyword">from</span> score b <span class="keyword">where</span> a.cno = b.cno);</span><br></pre></td></tr></table></figure>
+
+<h3 id="not-like-模糊查询取反"><a href="#not-like-模糊查询取反" class="headerlink" title="not like 模糊查询取反"></a>not like 模糊查询取反</h3><h4 id="查询student表中不姓’王‘的同学记录"><a href="#查询student表中不姓’王‘的同学记录" class="headerlink" title="查询student表中不姓’王‘的同学记录"></a>查询student表中不姓’王‘的同学记录</h4><ul>
+<li>not like : 不像</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> sname <span class="keyword">not</span> <span class="keyword">like</span> <span class="string">'王%'</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="year函数与now函数"><a href="#year函数与now函数" class="headerlink" title="year函数与now函数"></a>year函数与now函数</h3><h4 id="查询student表中每个学生的姓名和年龄。"><a href="#查询student表中每个学生的姓名和年龄。" class="headerlink" title="查询student表中每个学生的姓名和年龄。"></a>查询student表中每个学生的姓名和年龄。</h4><ul>
+<li>now() :　取当前日期</li>
+</ul>
+<p>年龄 = 当前年份-出生年份</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span>　sname,<span class="keyword">year</span>(<span class="keyword">now</span>()) - <span class="keyword">year</span>(sbirthday) <span class="keyword">as</span> <span class="string">'年龄'</span> <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+<h3 id="max与min函数"><a href="#max与min函数" class="headerlink" title="max与min函数"></a>max与min函数</h3><h4 id="查询student表中最大和最小的sbirthday日期值"><a href="#查询student表中最大和最小的sbirthday日期值" class="headerlink" title="查询student表中最大和最小的sbirthday日期值"></a>查询student表中最大和最小的sbirthday日期值</h4><ul>
+<li>max() ： 取最大值</li>
+<li>min() : 取最小值</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">max</span>(sbirthday) <span class="keyword">as</span> <span class="string">'最大'</span>,<span class="keyword">min</span>(sbirthday) <span class="keyword">as</span> <span class="string">'最小'</span> <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+<h3 id="多字段排序"><a href="#多字段排序" class="headerlink" title="多字段排序"></a>多字段排序</h3><h4 id="以班号和年龄从大到小的顺序查询student表中的全部记录。"><a href="#以班号和年龄从大到小的顺序查询student表中的全部记录。" class="headerlink" title="以班号和年龄从大到小的顺序查询student表中的全部记录。"></a>以班号和年龄从大到小的顺序查询student表中的全部记录。</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">class</span> <span class="keyword">desc</span>,sbirthday;</span><br></pre></td></tr></table></figure>
+
+<h3 id="按等级查询"><a href="#按等级查询" class="headerlink" title="按等级查询"></a>按等级查询</h3><p>假设使用如下命令建立了一个grade表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> grade(</span><br><span class="line">	<span class="keyword">low</span> <span class="built_in">int</span>(<span class="number">3</span>),</span><br><span class="line">    upp <span class="built_in">int</span>(<span class="number">3</span>),</span><br><span class="line">    grade <span class="built_in">char</span>(<span class="number">1</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">90</span>,<span class="number">100</span>,<span class="string">'A'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">80</span>,<span class="number">89</span>,<span class="string">'B'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">70</span>,<span class="number">79</span>,<span class="string">'C'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">60</span>,<span class="number">69</span>,<span class="string">'D'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">0</span>,<span class="number">59</span>,<span class="string">'E'</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="现查询所有同学的sno、cno和grade列"><a href="#现查询所有同学的sno、cno和grade列" class="headerlink" title="现查询所有同学的sno、cno和grade列"></a>现查询所有同学的sno、cno和grade列</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cno,grade <span class="keyword">from</span> score,grade <span class="keyword">where</span> degree <span class="keyword">between</span> <span class="keyword">low</span> <span class="keyword">and</span> upp;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">MySQL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据库学习笔记//" class="article-tag-list-link color3">数据库学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/a08a31.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-数据库的三大设计范式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/7c84c2b2.html">数据库的三大设计范式</a>
+    </h1>
+  
+
+        
+        <a href="/archives/7c84c2b2.html" class="archive-article-date">
+  	<time datetime="2020-02-12T07:26:35.485Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-12</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据库的三大设计范式"><a href="#数据库的三大设计范式" class="headerlink" title="数据库的三大设计范式"></a>数据库的三大设计范式</h1><h2 id="第一范式"><a href="#第一范式" class="headerlink" title="第一范式"></a>第一范式</h2><p>– 1NF</p>
+<h3 id="数据表中的所有字段都是不可分割的原子值？"><a href="#数据表中的所有字段都是不可分割的原子值？" class="headerlink" title="数据表中的所有字段都是不可分割的原子值？"></a>数据表中的所有字段都是不可分割的原子值？</h3><p>下表中地址可以继续拆分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student2(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> vaichar(<span class="number">20</span>),</span><br><span class="line">    address <span class="built_in">varchar</span>(<span class="number">30</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="字段值还可以继续拆分的，就不满足第一范式"><a href="#字段值还可以继续拆分的，就不满足第一范式" class="headerlink" title="字段值还可以继续拆分的，就不满足第一范式"></a>字段值还可以继续拆分的，就不满足第一范式</h3><p>下表将地址得更小，更细</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student2(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> vaichar(<span class="number">20</span>),</span><br><span class="line">    country <span class="built_in">varchar</span>(<span class="number">30</span>)，</span><br><span class="line">    privence <span class="built_in">varchar</span>(<span class="number">30</span>),</span><br><span class="line">    city <span class="built_in">varchar</span>(<span class="number">30</span>),</span><br><span class="line">    detail <span class="built_in">varchar</span>(<span class="number">30</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>范式，设计的越详细，对于某些实际操作可能更好，但是不一定都是好处</p>
+<h2 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h2><ol>
+<li>必须满足第一范式的前提下，第二范式要求，出主键的每一列都必需完全依赖于主键</li>
+<li>如果出现不完全依赖，只可能发生在联合主键的情况下。</li>
+</ol>
+<p>订单表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> myorder(</span><br><span class="line">	product_id <span class="built_in">int</span>,</span><br><span class="line">    customer_id <span class="built_in">int</span>,</span><br><span class="line">    product_name <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    customer_name <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    primary <span class="keyword">key</span>(product_id,customer_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>问题？</p>
+<p>customer_name 只与 customer_id 有关,</p>
+<p>product_name 只与 product_id 有关，</p>
+<p>除主键以外的其他列，只依赖于主键的部分字段，不满足第二范式</p>
+<p>解决办法</p>
+<p>拆表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> myorder(</span><br><span class="line">	order_id <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    product_id <span class="built_in">int</span>,</span><br><span class="line">    customer_id <span class="built_in">int</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> product(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> customer(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>分成三个表之后，就满足了第二范式的设计！！</p>
+<h2 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h2><p>– 3NF</p>
+<p>必须先满足第二范式，除开主键列的其他列之间不能有传递依赖关系</p>
+<p>如下订单表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> myorder(</span><br><span class="line">	order_id <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    product_id <span class="built_in">int</span>,</span><br><span class="line">    customer_id <span class="built_in">int</span>,</span><br><span class="line">    customer_phone <span class="built_in">varchar</span>(<span class="number">15</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>问题： </p>
+<p>customer_phone 与 customer_id 之间明显存在依赖关系，出现关系冗余</p>
+<p>解决办法</p>
+<p>拆表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> myorder(</span><br><span class="line">	order_id <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    product_id <span class="built_in">int</span>,</span><br><span class="line">    customer_id <span class="built_in">int</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> customer(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    phone <span class="built_in">varchar</span>(<span class="number">15</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">MySQL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据库学习笔记//" class="article-tag-list-link color3">数据库学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/7c84c2b2.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql建表约束" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/c8a25dc4.html">mysql建表约束</a>
+    </h1>
+  
+
+        
+        <a href="/archives/c8a25dc4.html" class="archive-article-date">
+  	<time datetime="2020-02-12T06:16:44.411Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-12</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mysql建表约束"><a href="#mysql建表约束" class="headerlink" title="mysql建表约束"></a>mysql建表约束</h1><h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3><p>它能唯一确定一张表中的一条记录，也就是我们通过给某个字段添加约束，就可以使得该字段不重复且不为空。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span>  <span class="keyword">table</span> <span class="keyword">user</span>(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h4 id="联合主键"><a href="#联合主键" class="headerlink" title="联合主键"></a>联合主键</h4><p>只要联合的主键值加起来不重复就可以</p>
+<p>联合主键中任何一个都不能为BULL（空）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user2(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    <span class="keyword">password</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    premary <span class="keyword">key</span>(<span class="keyword">id</span>,<span class="keyword">name</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="自增约束"><a href="#自增约束" class="headerlink" title="自增约束"></a>自增约束</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user3(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span> auto_increment,</span><br><span class="line">    <span class="keyword">name</span> carchar(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果说我们创建表的时候，忘记创建主键约束了？该怎么办？"><a href="#如果说我们创建表的时候，忘记创建主键约束了？该怎么办？" class="headerlink" title="如果说我们创建表的时候，忘记创建主键约束了？该怎么办？"></a>如果说我们创建表的时候，忘记创建主键约束了？该怎么办？</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user4(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> user4 <span class="keyword">add</span> primary <span class="keyword">key</span>(<span class="keyword">id</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改表结构，添加主键"><a href="#修改表结构，添加主键" class="headerlink" title="修改表结构，添加主键"></a>修改表结构，添加主键</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> user4 <span class="keyword">add</span> primary <span class="keyword">key</span>(<span class="keyword">id</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何删除？"><a href="#如何删除？" class="headerlink" title="如何删除？"></a>如何删除？</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> user4 <span class="keyword">drop</span> primary <span class="keyword">key</span>(<span class="keyword">id</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用modify修改字段，修改字段，添加约束"><a href="#使用modify修改字段，修改字段，添加约束" class="headerlink" title="使用modify修改字段，修改字段，添加约束"></a>使用modify修改字段，修改字段，添加约束</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> user4 <span class="keyword">modify</span> <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="唯一约束"><a href="#唯一约束" class="headerlink" title="唯一约束"></a>唯一约束</h3><p>约束修饰的字段的值不可以重复</p>
+<p>unique(id,name) 表示两个键在一起不重复就行（可以为空）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user5(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> user5 <span class="keyword">add</span> <span class="keyword">unique</span>(<span class="keyword">name</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user6(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    <span class="keyword">unique</span>(<span class="keyword">name</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user7(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">unique</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user8(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    <span class="keyword">unique</span>(<span class="keyword">id</span>,<span class="keyword">name</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何删除唯一约束？"><a href="#如何删除唯一约束？" class="headerlink" title="如何删除唯一约束？"></a>如何删除唯一约束？</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> user7 <span class="keyword">drop</span> <span class="keyword">index</span> <span class="keyword">name</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="modify-添加？"><a href="#modify-添加？" class="headerlink" title="modify 添加？"></a>modify 添加？</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> user7 <span class="keyword">modify</span> <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">unique</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h3><ol>
+<li>建表的时候就添加约束</li>
+<li>可以使用 alter [表] add 。。。</li>
+<li>alter  [表] modify 。。。</li>
+<li>删除 alter  [表] drop 。。。</li>
+</ol>
+<h3 id="非空约束"><a href="#非空约束" class="headerlink" title="非空约束"></a>非空约束</h3><p>修饰的字段不能为空 NULL</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user9(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="默认约束"><a href="#默认约束" class="headerlink" title="默认约束"></a>默认约束</h3><p>就是当我们插入字段值的时候，如果没有传值，就会使用默认值</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> user10(</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    age <span class="built_in">int</span> <span class="keyword">default</span> <span class="number">10</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h3><p>– 涉及到两个表：父表，子表</p>
+<p>– 主表，副表</p>
+<p>– 班级</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> classes(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>– 学生表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> students(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    class_id <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(class_id) <span class="keyword">references</span> classes(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>主表classes 中没有的数据值，在副表中，是不可以使用的</li>
+<li>主表中的记录被副表引用，是不可以被删除的。</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">MySQL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据库学习笔记//" class="article-tag-list-link color3">数据库学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/c8a25dc4.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql初体验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/295082ac.html">mysql初体验</a>
+    </h1>
+  
+
+        
+        <a href="/archives/295082ac.html" class="archive-article-date">
+  	<time datetime="2020-02-12T05:07:12.579Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-12</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mysql学习笔记"><a href="#mysql学习笔记" class="headerlink" title="mysql学习笔记"></a>mysql学习笔记</h1><p>– 关系型数据库</p>
+<h2 id="一、如何使用终端操作数据库"><a href="#一、如何使用终端操作数据库" class="headerlink" title="一、如何使用终端操作数据库"></a>一、如何使用终端操作数据库</h2><h4 id="如何登录数据库服务器"><a href="#如何登录数据库服务器" class="headerlink" title="如何登录数据库服务器"></a>如何登录数据库服务器</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u[用户名] -p[密码]</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何查看数据库服务器中的所有数据"><a href="#如何查看数据库服务器中的所有数据" class="headerlink" title="如何查看数据库服务器中的所有数据"></a>如何查看数据库服务器中的所有数据</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何选中某一个数据库进行操作"><a href="#如何选中某一个数据库进行操作" class="headerlink" title="如何选中某一个数据库进行操作"></a>如何选中某一个数据库进行操作</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> [数据库];</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询表"><a href="#查询表" class="headerlink" title="查询表"></a>查询表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> [表];</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> [表] <span class="keyword">where</span> [条件];</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何退出数据库"><a href="#如何退出数据库" class="headerlink" title="如何退出数据库"></a>如何退出数据库</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何在数据库服务器中创建我们的数据库"><a href="#如何在数据库服务器中创建我们的数据库" class="headerlink" title="如何在数据库服务器中创建我们的数据库"></a>如何在数据库服务器中创建我们的数据库</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">creat database [数据库];</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何查看某个数据库中所有的数据表"><a href="#如何查看某个数据库中所有的数据表" class="headerlink" title="如何查看某个数据库中所有的数据表"></a>如何查看某个数据库中所有的数据表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何创建一个数据表"><a href="#如何创建一个数据表" class="headerlink" title="如何创建一个数据表"></a>如何创建一个数据表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">tables</span> pet(</span><br><span class="line">	<span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    owner <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    species <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    sex cahr(<span class="number">1</span>),</span><br><span class="line">    birth <span class="built_in">date</span>,</span><br><span class="line">    death <span class="built_in">date</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何查看数据表是否创建成功"><a href="#如何查看数据表是否创建成功" class="headerlink" title="如何查看数据表是否创建成功"></a>如何查看数据表是否创建成功</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看创建好的数据表的结构"><a href="#查看创建好的数据表的结构" class="headerlink" title="查看创建好的数据表的结构"></a>查看创建好的数据表的结构</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">describe</span> [表];</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何查看数据表中的记录"><a href="#如何查看数据表中的记录" class="headerlink" title="如何查看数据表中的记录"></a>如何查看数据表中的记录</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> [表];</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何往数据表中插入数据记录"><a href="#如何往数据表中插入数据记录" class="headerlink" title="如何往数据表中插入数据记录"></a>如何往数据表中插入数据记录</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> [表] <span class="keyword">values</span>(<span class="string">'[数据]'</span>,<span class="string">'[数据]'</span>,...)</span><br></pre></td></tr></table></figure>
+
+<h4 id="mysql常用数据类型有哪些"><a href="#mysql常用数据类型有哪些" class="headerlink" title="mysql常用数据类型有哪些"></a>mysql常用数据类型有哪些</h4><p>– MySQL支持多种类型，大致可以分为三类：</p>
+<p>– 数值</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">大小</th>
+<th align="left">范围（有符号）</th>
+<th align="left">范围（无符号）</th>
+<th align="left">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">TINYINT</td>
+<td align="left">1 字节</td>
+<td align="left">(-128，127)</td>
+<td align="left">(0，255)</td>
+<td align="left">小整数值</td>
+</tr>
+<tr>
+<td align="left">SMALLINT</td>
+<td align="left">2 字节</td>
+<td align="left">(-32 768，32 767)</td>
+<td align="left">(0，65 535)</td>
+<td align="left">大整数值</td>
+</tr>
+<tr>
+<td align="left">MEDIUMINT</td>
+<td align="left">3 字节</td>
+<td align="left">(-8 388 608，8 388 607)</td>
+<td align="left">(0，16 777 215)</td>
+<td align="left">大整数值</td>
+</tr>
+<tr>
+<td align="left">INT或INTEGER</td>
+<td align="left">4 字节</td>
+<td align="left">(-2 147 483 648，2 147 483 647)</td>
+<td align="left">(0，4 294 967 295)</td>
+<td align="left">大整数值</td>
+</tr>
+<tr>
+<td align="left">BIGINT</td>
+<td align="left">8 字节</td>
+<td align="left">(-9,223,372,036,854,775,808，9 223 372 036 854 775 807)</td>
+<td align="left">(0，18 446 744 073 709 551 615)</td>
+<td align="left">极大整数值</td>
+</tr>
+<tr>
+<td align="left">FLOAT</td>
+<td align="left">4 字节</td>
+<td align="left">(-3.402 823 466 E+38，-1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)</td>
+<td align="left">0，(1.175 494 351 E-38，3.402 823 466 E+38)</td>
+<td align="left">单精度 浮点数值</td>
+</tr>
+<tr>
+<td align="left">DOUBLE</td>
+<td align="left">8 字节</td>
+<td align="left">(-1.797 693 134 862 315 7 E+308，-2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td align="left">0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td align="left">双精度 浮点数值</td>
+</tr>
+<tr>
+<td align="left">DECIMAL</td>
+<td align="left">对DECIMAL(M,D) ，如果M&gt;D，为M+2否则为D+2</td>
+<td align="left">依赖于M和D的值</td>
+<td align="left">依赖于M和D的值</td>
+<td align="left">小数值</td>
+</tr>
+</tbody></table>
+<p>– 日期/时间</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">大小 (字节)</th>
+<th align="left">范围</th>
+<th align="left">格式</th>
+<th align="left">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>DATE</strong></td>
+<td align="left">3</td>
+<td align="left">1000-01-01/9999-12-31</td>
+<td align="left">YYYY-MM-DD</td>
+<td align="left">日期值</td>
+</tr>
+<tr>
+<td align="left"><strong>TIME</strong></td>
+<td align="left">3</td>
+<td align="left">‘-838:59:59’/‘838:59:59’</td>
+<td align="left">HH:MM:SS</td>
+<td align="left">时间值或持续时间</td>
+</tr>
+<tr>
+<td align="left">YEAR</td>
+<td align="left">1</td>
+<td align="left">1901/2155</td>
+<td align="left">YYYY</td>
+<td align="left">年份值</td>
+</tr>
+<tr>
+<td align="left"><strong>DATETIME</strong></td>
+<td align="left">8</td>
+<td align="left">1000-01-01 00:00:00/9999-12-31 23:59:59</td>
+<td align="left">YYYY-MM-DD HH:MM:SS</td>
+<td align="left">混合日期和时间值</td>
+</tr>
+<tr>
+<td align="left"><strong>TIMESTAMPS</strong></td>
+<td align="left">4</td>
+<td align="left">1970-01-01 00:00:00/2038结束时间是第 <strong>2147483647</strong> 秒，北京时间 <strong>2038-1-19 11:14:07</strong>，格林尼治时间 2038年1月19日 凌晨 03:14:07</td>
+<td align="left">YYYYMMDD HHMMSS</td>
+<td align="left">混合日期和时间值，时间戳</td>
+</tr>
+</tbody></table>
+<p>– 和字符串(字符)类型。</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">大小</th>
+<th align="left">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>CHAR</strong></td>
+<td align="left">0-255字节</td>
+<td align="left">定长字符串</td>
+</tr>
+<tr>
+<td align="left"><strong>WATCHMAKER</strong></td>
+<td align="left">0-65535 字节</td>
+<td align="left">变长字符串</td>
+</tr>
+<tr>
+<td align="left">TINY BLOB</td>
+<td align="left">0-255字节</td>
+<td align="left">不超过 255 个字符的二进制字符串</td>
+</tr>
+<tr>
+<td align="left">TINY TEXT</td>
+<td align="left">0-255字节</td>
+<td align="left">短文本字符串</td>
+</tr>
+<tr>
+<td align="left">BLOB</td>
+<td align="left">0-65 535字节</td>
+<td align="left">二进制形式的长文本数据</td>
+</tr>
+<tr>
+<td align="left"><strong>TEXT</strong></td>
+<td align="left">0-65 535字节</td>
+<td align="left">长文本数据</td>
+</tr>
+<tr>
+<td align="left">MEDIUM BLOB</td>
+<td align="left">0-16 777 215字节</td>
+<td align="left">二进制形式的中等长度文本数据</td>
+</tr>
+<tr>
+<td align="left">MEDIUM TEXT</td>
+<td align="left">0-16 777 215字节</td>
+<td align="left">中等长度文本数据</td>
+</tr>
+<tr>
+<td align="left">LONG BLOB</td>
+<td align="left">0-4 294 967 295字节</td>
+<td align="left">二进制形式的极大文本数据</td>
+</tr>
+<tr>
+<td align="left">LONG TEXT</td>
+<td align="left">0-4 294 967 295字节</td>
+<td align="left">极大文本数据</td>
+</tr>
+</tbody></table>
+<h4 id="数据类型如何选择"><a href="#数据类型如何选择" class="headerlink" title="数据类型如何选择"></a>数据类型如何选择</h4><p>日期 选择按照格式</p>
+<p>数值和字符串按照大小！</p>
+<h4 id="如何删除数据？"><a href="#如何删除数据？" class="headerlink" title="如何删除数据？"></a>如何删除数据？</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> [表] <span class="keyword">where</span> [条件];</span><br></pre></td></tr></table></figure>
+
+<h4 id="如何修改数据？"><a href="#如何修改数据？" class="headerlink" title="如何修改数据？"></a>如何修改数据？</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> [表] <span class="keyword">set</span> <span class="keyword">where</span> [条件];</span><br></pre></td></tr></table></figure>
+
+<h4 id="总结一下：数据记录常见操作？"><a href="#总结一下：数据记录常见操作？" class="headerlink" title="总结一下：数据记录常见操作？"></a>总结一下：数据记录常见操作？</h4><p>– 增加</p>
+<p>insert</p>
+<p>– 删除</p>
+<p>delete</p>
+<p>– 修改</p>
+<p>update</p>
+<p>– 查询</p>
+<p>select</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">MySQL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据库学习笔记//" class="article-tag-list-link color3">数据库学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/295082ac.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-习近平新时代中国特色社会主义思想的主要内容和历史地位" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/354f6a34.html">习近平新时代中国特色社会主义思想的主要内容和历史地位</a>
+    </h1>
+  
+
+        
+        <a href="/archives/354f6a34.html" class="archive-article-date">
+  	<time datetime="2019-12-20T11:28:44.030Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-20</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="习近平新时代中国特色社会主义思想的主要内容和历史地位"><a href="#习近平新时代中国特色社会主义思想的主要内容和历史地位" class="headerlink" title="习近平新时代中国特色社会主义思想的主要内容和历史地位"></a>习近平新时代中国特色社会主义思想的主要内容和历史地位</h1><h4 id="习近平新时代中国特色社会主义思想的主要内容可以概括为“八个明确”和“十四个坚持”："><a href="#习近平新时代中国特色社会主义思想的主要内容可以概括为“八个明确”和“十四个坚持”：" class="headerlink" title="习近平新时代中国特色社会主义思想的主要内容可以概括为“八个明确”和“十四个坚持”："></a>习近平新时代中国特色社会主义思想的主要内容可以概括为“八个明确”和“十四个坚持”：</h4><h5 id="“八个明确”是习近平新时代中国特色社会主义思想的基本内涵："><a href="#“八个明确”是习近平新时代中国特色社会主义思想的基本内涵：" class="headerlink" title="“八个明确”是习近平新时代中国特色社会主义思想的基本内涵："></a>“八个明确”是习近平新时代中国特色社会主义思想的基本内涵：</h5><ul>
+<li>明确坚持和发展中国特色社会主义，总任务是实现社会主义现代化和中华民族伟大复兴，在全面建成小康社会的基础上，分两步走在本世纪中叶建成富强民主文明和谐美丽的社会主义现代化强国。</li>
+<li>明确新时代中国社会主要矛盾是人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾，必须坚持以人民为中心的发展思想，不断促进人的全面发展、全体人民共同富裕。</li>
+<li>明确中国特色社会主义事业总体布局是“五位一体”、战略布局是“四个全面”，强调坚定“四个自信”。</li>
+<li>明确全面深化改革总目标是完善和发展中国特色社会主义制度、推进国家治理体系和治理能力现代化。</li>
+<li>明确全面推进依法治国总目标是建设中国特色社会主义法治体系、建设社会主义法治国家。</li>
+<li>明确党在新时代的强军目标是建设一支听党指挥、能打胜仗、作风优良的人民军队，把人民军队建设成为世界一流军队。</li>
+<li>明确中国特色大国外交要推动构建新型国际关系，推动构建人类命运共同体。</li>
+<li>明确中国特色社会主义最本质的特征是中国共产党领导。“党政军民学，东西南北中，党是领导一切的。”中国特色社会主义制度的最大优势是中国共产党领导，党是最高政治领导力量，提出新时代党的建设总要求，突出政治建设在党的建设中的重要地位。</li>
+</ul>
+<h5 id="“十四个坚持”则是习近平新时代中国特色社会主义思想基本方略："><a href="#“十四个坚持”则是习近平新时代中国特色社会主义思想基本方略：" class="headerlink" title="“十四个坚持”则是习近平新时代中国特色社会主义思想基本方略："></a>“十四个坚持”则是习近平新时代中国特色社会主义思想基本方略：</h5><ul>
+<li>坚持党对一切工作的领导。</li>
+<li>坚持以人民为中心。</li>
+<li>坚持全面深化改革。</li>
+<li>坚持新发展理念。</li>
+<li>坚持人民当家作主。</li>
+<li>坚持全面依法治国。</li>
+<li>坚持社会主义核心价值体系。</li>
+<li>坚持在发展中保障和改善民生。</li>
+<li>坚持人与自然和谐共生。</li>
+<li>坚持总体国家安全观。</li>
+<li>坚持党对人民军队的绝对领导。</li>
+<li>坚持“一国两制”和推进祖国统一。</li>
+<li>坚持推动构建人类命运共同体。</li>
+<li>坚持全面从严治党。</li>
+</ul>
+<h4 id="我们可以将习近平新时代中国特色社会主义思想的历史地位及深远意义概括为三个方面"><a href="#我们可以将习近平新时代中国特色社会主义思想的历史地位及深远意义概括为三个方面" class="headerlink" title="我们可以将习近平新时代中国特色社会主义思想的历史地位及深远意义概括为三个方面"></a>我们可以将习近平新时代中国特色社会主义思想的历史地位及深远意义概括为三个方面</h4><h5 id="一是习近平新时代中国特色社会主义思想开启了一个历史性飞跃。"><a href="#一是习近平新时代中国特色社会主义思想开启了一个历史性飞跃。" class="headerlink" title="一是习近平新时代中国特色社会主义思想开启了一个历史性飞跃。"></a>一是习近平新时代中国特色社会主义思想开启了一个历史性飞跃。</h5><p>这就是党的十九大报告所指出的，“久经磨难的中华民族迎来了从站起来、富起来到强起来的伟大飞跃”。</p>
+<h5 id="二是习近平新时代中国特色社会主义思想引领了一个历史征程。"><a href="#二是习近平新时代中国特色社会主义思想引领了一个历史征程。" class="headerlink" title="二是习近平新时代中国特色社会主义思想引领了一个历史征程。"></a>二是习近平新时代中国特色社会主义思想引领了一个历史征程。</h5><p>在这一思想指引下，中国特色社会主义进入新时代，开启了建设社会主义现代化强国的新征程，充分展示出中华民族伟大复兴的光明前景。</p>
+<h5 id="三是习近平新时代中国特色社会主义思想破解了一个历史课题。"><a href="#三是习近平新时代中国特色社会主义思想破解了一个历史课题。" class="headerlink" title="三是习近平新时代中国特色社会主义思想破解了一个历史课题。"></a>三是习近平新时代中国特色社会主义思想破解了一个历史课题。</h5><p>在这一思想指引下，“科学社会主义在21世纪的中国焕发出强大生机活力”，成功地开创了社会主义现代化新道路，打破了资本主义现代化道路的“一统天下”，为更多国家启动和实现现代化提供了全新的道路选择，拓展了更大的发展空间，贡献了中国智慧和中国方案，解决了发展中国家如何实现现代化的历史性课题。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/354f6a34.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-scanf返回值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -522,574 +1710,9 @@
 
 
   
-    <article id="post-杨辉三角" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/3601.html">杨辉三角</a>
-    </h1>
-  
-
-        
-        <a href="/archives/3601.html" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:57.994Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h1><p>给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。</p>
-<p>在杨辉三角中，每个数是它左上方和右上方的数的和。</p>
-<p>示例:</p>
-<p>输入: 5<br>输出:<br>[<br>     [1],<br>    [1,1],<br>   [1,2,1],<br>  [1,3,3,1],<br> [1,4,6,4,1]<br>]</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/leetcode//" class="article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/3601.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-奇偶排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/28594.html">奇偶排序</a>
-    </h1>
-  
-
-        
-        <a href="/archives/28594.html" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:57.879Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="奇偶排序"><a href="#奇偶排序" class="headerlink" title="奇偶排序"></a>奇偶排序</h1><p>编写完整的程序。将一个数组中的所有奇数移到偶数之前，要求奇偶内部有序。</p>
-<p>输入说明：整数数组；</p>
-<p>输出说明：整数数组，奇数移到偶数之前且奇偶部分分别有序</p>
-<p>输入样例：4 5 1 6 9 8</p>
-<p>输出样例：1 5 9 4 6 8
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/试题//" class="article-tag-list-link color3">试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/28594.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-分割平衡字符串" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/20288.html">分割平衡字符串</a>
-    </h1>
-  
-
-        
-        <a href="/archives/20288.html" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:57.769Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="分割平衡字符串"><a href="#分割平衡字符串" class="headerlink" title="分割平衡字符串"></a><strong>分割平衡字符串</strong></h1><p>在一个「平衡字符串」中，’L’ 和 ‘R’ 字符的数量是相同的。</p>
-<p>给出一个平衡字符串 s，请你将它分割成尽可能多的平衡字符串。</p>
-<p>返回可以通过分割得到的平衡字符串的最大数量。</p>
-<p> 示例 1：</p>
-<p>输入：s = “RLRRLLRLRL”<br>输出：4<br>解释：s 可以分割为 “RL”, “RRLL”, “RL”, “RL”, 每个子字符串中都包含相同数量的 ‘L’ 和 ‘R’。<br>示例 2：
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/leetcode//" class="article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/20288.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-strstr函数的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/40496.html">strstr函数的实现</a>
-    </h1>
-  
-
-        
-        <a href="/archives/40496.html" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:57.719Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="strstr函数的实现"><a href="#strstr函数的实现" class="headerlink" title="strstr函数的实现"></a>strstr函数的实现</h1><h3 id="编写完整的程序。采用顺序存储方式存储串，计算一个子串在字符串中首次出现的位置，输出这个下标。"><a href="#编写完整的程序。采用顺序存储方式存储串，计算一个子串在字符串中首次出现的位置，输出这个下标。" class="headerlink" title="编写完整的程序。采用顺序存储方式存储串，计算一个子串在字符串中首次出现的位置，输出这个下标。"></a>编写完整的程序。采用顺序存储方式存储串，计算一个子串在字符串中首次出现的位置，输出这个下标。</h3><p>输入说明：字符串ms 字符串zs</p>
-<p>输出说明：zs在ms中首次出现下标</p>
-<p>输入样例：baadefaadcb aadc</p>
-<p>输出样例：6</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/字符串//" class="article-tag-list-link color4">字符串</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/40496.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-#输出三数中的最大（小）值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/57731.html">#输出三数中的最大（小）值</a>
-    </h1>
-  
-
-        
-        <a href="/archives/57731.html" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:57.679Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#<strong>输出三数中的最大（小）值</strong></p>
-<p>###</p>
-<p>编写完整的程序。输入三个数，输出其中的最大数，最小数。</p>
-<p>输入说明：两个整数N1 N2 N3；</p>
-<p>输出说明：最大数 最小数</p>
-<p>输入样例：5 4 9</p>
-<p>输出样例：9 4</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/试题//" class="article-tag-list-link color3">试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/57731.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-#输出两数之差（和）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/47102.html">#输出两数之差（和）</a>
-    </h1>
-  
-
-        
-        <a href="/archives/47102.html" class="archive-article-date">
-  	<time datetime="2019-11-26T12:26:57.640Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#<strong>输出两数之差（和）</strong></p>
-<p>###编写完整的程序。输入两个数，输出他们的和与差。</p>
-<p>输入说明：两个整数N1，N2；</p>
-<p>输出说明：两个整数的和与差</p>
-<p>输入样例：12 7</p>
-<p>输出样例：19 5</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/试题//" class="article-tag-list-link color3">试题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/47102.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1101,7 +1724,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 S.Arbor
+    		&copy; 2020 S.Arbor
     	</div>
       	<div class="footer-right">
     
@@ -1204,6 +1827,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
               </li>
             
             <div class="clearfix"></div>
