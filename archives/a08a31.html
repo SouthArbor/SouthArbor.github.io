@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="S.Arbor的个人博客">
 <meta property="og:description" content="mysql查询练习创建数据库创建查询练习数据库selecttext。 123create database selecttext;use selecttext;    创建表学生表 student   学号 姓名 性别 出生年月生日 所在班级  1234567create table student(	sno varchar(20) primary key,    sname varchar(20">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-16T09:02:36.490Z">
+<meta property="og:updated_time" content="2020-02-16T09:10:11.420Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -201,7 +201,7 @@
 </ol>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">	sno <span class="built_in">varchar</span>(<span class="number">20</span>) primary <span class="keyword">key</span>,</span><br><span class="line">    sname <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    ssex <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    sbirthday datetime,</span><br><span class="line">    <span class="keyword">class</span> vaichar(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-
+<a id="more"></a>
 
 
 
@@ -515,6 +515,10 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> grade(</span><br><span class="line">	<span class="keyword">low</span> <span class="built_in">int</span>(<span class="number">3</span>),</span><br><span class="line">    upp <span class="built_in">int</span>(<span class="number">3</span>),</span><br><span class="line">    grade <span class="built_in">char</span>(<span class="number">1</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">90</span>,<span class="number">100</span>,<span class="string">'A'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">80</span>,<span class="number">89</span>,<span class="string">'B'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">70</span>,<span class="number">79</span>,<span class="string">'C'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">60</span>,<span class="number">69</span>,<span class="string">'D'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> grade <span class="keyword">values</span>(<span class="number">0</span>,<span class="number">59</span>,<span class="string">'E'</span>);</span><br></pre></td></tr></table></figure>
 
 <h4 id="现查询所有同学的sno、cno和grade列"><a href="#现查询所有同学的sno、cno和grade列" class="headerlink" title="现查询所有同学的sno、cno和grade列"></a>现查询所有同学的sno、cno和grade列</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cno,grade <span class="keyword">from</span> score,grade <span class="keyword">where</span> degree <span class="keyword">between</span> <span class="keyword">low</span> <span class="keyword">and</span> upp;</span><br></pre></td></tr></table></figure>
+
+
+
+
       
 
       
@@ -819,15 +823,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
               </li>
             
             <div class="clearfix"></div>

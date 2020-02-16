@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="S.Arbor的个人博客">
 <meta property="og:description" content="数据库的三大设计范式第一范式– 1NF 数据表中的所有字段都是不可分割的原子值？下表中地址可以继续拆分 12345create table student2(	id int primary key,    name vaichar(20),    address varchar(30));  字段值还可以继续拆分的，就不满足第一范式下表将地址得更小，更细 12345678create table">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-16T09:01:57.563Z">
+<meta property="og:updated_time" content="2020-02-16T09:08:35.299Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -192,6 +192,8 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student2(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="keyword">name</span> vaichar(<span class="number">20</span>),</span><br><span class="line">    country <span class="built_in">varchar</span>(<span class="number">30</span>)，</span><br><span class="line">    privence <span class="built_in">varchar</span>(<span class="number">30</span>),</span><br><span class="line">    city <span class="built_in">varchar</span>(<span class="number">30</span>),</span><br><span class="line">    detail <span class="built_in">varchar</span>(<span class="number">30</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
 <p>范式，设计的越详细，对于某些实际操作可能更好，但是不一定都是好处</p>
+<a id="more"></a>
+
 <h2 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h2><ol>
 <li>必须满足第一范式的前提下，第二范式要求，出主键的每一列都必需完全依赖于主键</li>
 <li>如果出现不完全依赖，只可能发生在联合主键的情况下。</li>
@@ -524,15 +526,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
               </li>
             
             <div class="clearfix"></div>
