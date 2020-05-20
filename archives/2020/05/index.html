@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>关于malloc的内存分配 | S.Arbor的个人博客</title>
+  <title>Archives: 2020/5 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
-<meta name="keywords" content="随笔">
-<meta property="og:type" content="article">
-<meta property="og:title" content="关于malloc的内存分配">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;37683.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="S.Arbor的个人博客">
+<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;2020&#x2F;05&#x2F;index.html">
 <meta property="og:site_name" content="S.Arbor的个人博客">
-<meta property="og:description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-01T11:42:48.794Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -155,260 +151,76 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于malloc的内存分配" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      关于malloc的内存分配
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/archives/be528ce6.html" class="archive-article-date">
+  	<time datetime="2020-05-20T12:23:10.728Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/archives/be528ce6.html">军事理论（2020）章节测试答案</a>
     </h1>
   
 
-        
-        <a href="/archives/37683.html" class="archive-article-date">
-  	<time datetime="2019-11-24T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-24</time>
-</a>
-        
-    
-    
-        
-          <span class="archive-article-date">
-              阅读量 <span id="busuanzi_value_page_pv"></span>
-          </span>
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="关于malloc的内存分配"><a href="#关于malloc的内存分配" class="headerlink" title="关于malloc的内存分配"></a>关于malloc的内存分配</h1><p>​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。</p>
-<p>​    问题的引出：      </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-<a id="more"></a> 
-
-<p>C语言的数组的内存空间一定是连续的吗？</p>
-<p>按照我之前的想法，我认为这是可以申请成功的，malloc在给数组分配内存时会将内存块a和b连接起来共同作为这个数组的内存空间；（但事实是，我的想法是错误的）</p>
-<p>我之前一直认为： malloc 寻找内存，如果找不到到一个&gt;= 需求的连续内存空间，malloc就会将多个不连续的小内存块连接起来使用</p>
-<p>经过和群里的大佬的一番讨论，对malloc的内存分配机制有了更深入的了解：</p>
-<p>​    malloc 是用链表实现的</p>
-<p>​    内存以堆组成</p>
-<p>​    将可用的内存块连接为一个长长的列表的所谓空闲链表</p>
-<p>​    调用的时候就沿着链表找</p>
-<p>最后在一篇博文中找到了问题的答案：</p>
-<h6 id="原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><a href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850" class="headerlink" title="原文链接： https://blog.csdn.net/Fan0920/article/details/80999850"></a>原文链接： <a href="https://blog.csdn.net/Fan0920/article/details/80999850" target="_blank" rel="noopener">https://blog.csdn.net/Fan0920/article/details/80999850</a></h6><h2 id="问题的引出："><a href="#问题的引出：" class="headerlink" title="问题的引出："></a>问题的引出：</h2><p>堆包含一个链表来维护已用和空闲的内存块。在堆上新分配（用 new 或者 malloc）内存是从空闲的内存块中找到一些满足要求的合适块。所以可能让人觉得只要有很多不连续的零散的小区域，只要总数达到申请的内存块，就可以分配。</p>
-<p>  但事实上是不行的，这又让人觉得是不是零散的内存块不能连接成一个大的空间，而必须要一整块连续的内存空间才能申请成功呢。</p>
-<h2 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：</h2><ol>
-<li>申请和释放许多小的块可能会产生如下状态：在已用块之间存在很多小的空闲块。进而申请大块内存失败，虽然空闲块的总和足够，但是空闲的小块是零散的，不能满足申请的大小。这叫做“堆碎片”。</li>
-<li>当旁边有空闲块的已用块被释放时，新的空闲块会与相连的空闲块合并成一个大的空闲块，这样就可以有效的减少”堆碎片”的产生。</li>
-<li>堆分配的空间在<strong>逻辑地址上是连续的</strong>，但在<strong>物理地址上是不连续的</strong>（因为采用了页式内存管理,windows下有段机制、分页机制），如果逻辑地址空间上已经没有一段连续且足够大的空间，则分配内存失败。</li>
-</ol>
-<h3 id="堆栈的知识扩充："><a href="#堆栈的知识扩充：" class="headerlink" title="堆栈的知识扩充："></a>堆栈的知识扩充：</h3><p>原文地址： <a href="https://blog.csdn.net/jin13277480598/article/details/54406980" target="_blank" rel="noopener">https://blog.csdn.net/jin13277480598/article/details/54406980</a> </p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/堆栈//" class="article-tag-list-link color3">堆栈</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/堆栈/随笔//" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/37683.html" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/archives/46650.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          tip
-        
-      </div>
-    </a>
-  
-  
-    <a href="/archives/3375.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">梦到一个卖花的两手空空跟我说 人要先感到幸福 才能看到玫瑰</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/archives/c5fe61cc.html" class="archive-article-date">
+  	<time datetime="2020-05-07T03:54:01.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
+</a>
         </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于malloc的内存分配"><span class="toc-number">1.</span> <span class="toc-text">关于malloc的内存分配</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><span class="toc-number">1.0.0.0.0.1.</span> <span class="toc-text">原文链接： https://blog.csdn.net/Fan0920/article/details/80999850</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题的引出："><span class="toc-number">1.1.</span> <span class="toc-text">问题的引出：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#答案："><span class="toc-number">1.2.</span> <span class="toc-text">答案：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#堆栈的知识扩充："><span class="toc-number">1.2.1.</span> <span class="toc-text">堆栈的知识扩充：</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/archives/c5fe61cc.html">储物问题</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+          
+
         </div>
-        
-    </div>
-</aside>
-
-
-
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
   
+    </div></section>
   
 
-  
-
-  
-
-  
-  
-      <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-  clientID: 'e9b7df6b391aa2901a7e',
-  clientSecret: 'becd9776d509eb7608eb6b734484e7a9be55888b',
-  repo: 'SouthArbor.github.io',
-  owner: 'SouthArbor',
-  admin: ['SouthArbor'],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
-})
-
-gitalk.render('gitalk-container')
-</script>
-  
+    
 
 
           </div>
@@ -442,8 +254,8 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

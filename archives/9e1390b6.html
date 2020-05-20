@@ -6,17 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>关于malloc的内存分配 | S.Arbor的个人博客</title>
+  <title>MySQL连接查询 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="MySQL连接查询SQL的四种连接查询内连接 inner join 或者 join  外连接 左连接 left join 或者 left outer join  右连接 rightt join 或者 right outer join  完全外连接 full join 或者 full outer join">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于malloc的内存分配">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;37683.html">
+<meta property="og:title" content="MySQL连接查询">
+<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;9e1390b6.html">
 <meta property="og:site_name" content="S.Arbor的个人博客">
-<meta property="og:description" content="关于malloc的内存分配​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。 ​    问题的引出：       1假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？">
+<meta property="og:description" content="MySQL连接查询SQL的四种连接查询内连接 inner join 或者 join  外连接 左连接 left join 或者 left outer join  右连接 rightt join 或者 right outer join  完全外连接 full join 或者 full outer join">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-01T11:42:48.794Z">
+<meta property="og:updated_time" content="2020-05-20T12:30:30.701Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -155,20 +154,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于malloc的内存分配" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySQL连接查询" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      关于malloc的内存分配
+      MySQL连接查询
     </h1>
   
 
         
-        <a href="/archives/37683.html" class="archive-article-date">
-  	<time datetime="2019-11-24T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-24</time>
+        <a href="/archives/9e1390b6.html" class="archive-article-date">
+  	<time datetime="2020-02-17T06:19:05.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
 </a>
         
     
@@ -184,29 +183,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="关于malloc的内存分配"><a href="#关于malloc的内存分配" class="headerlink" title="关于malloc的内存分配"></a>关于malloc的内存分配</h1><p>​    今天在群里聊到了关于C语言的数组内存分配的问题。这涉及到了堆栈的知识，对知识面是一个不小的扩充。</p>
-<p>​    问题的引出：      </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假如现在有两个连续的内存块a和b，a的大小是10，b的大小是6。如果这时需要申请一个内存大小为12的数组，能否申请成功？</span><br></pre></td></tr></table></figure>
+        <h1 id="MySQL连接查询"><a href="#MySQL连接查询" class="headerlink" title="MySQL连接查询"></a>MySQL连接查询</h1><h2 id="SQL的四种连接查询"><a href="#SQL的四种连接查询" class="headerlink" title="SQL的四种连接查询"></a>SQL的四种连接查询</h2><h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><ul>
+<li>inner join 或者 join</li>
+</ul>
+<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><ul>
+<li><p>左连接 left join 或者 left outer join</p>
+</li>
+<li><p>右连接 rightt join 或者 right outer join</p>
+</li>
+<li><p>完全外连接 full join 或者 full outer join</p>
+<a id="more"></a>
 
-<a id="more"></a> 
+</li>
+</ul>
+<p>– 创建两个表：</p>
+<p>– person 表</p>
+<p>id,</p>
+<p>name,</p>
+<p>cardId</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> person(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    cardId <span class="built_in">int</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<p>C语言的数组的内存空间一定是连续的吗？</p>
-<p>按照我之前的想法，我认为这是可以申请成功的，malloc在给数组分配内存时会将内存块a和b连接起来共同作为这个数组的内存空间；（但事实是，我的想法是错误的）</p>
-<p>我之前一直认为： malloc 寻找内存，如果找不到到一个&gt;= 需求的连续内存空间，malloc就会将多个不连续的小内存块连接起来使用</p>
-<p>经过和群里的大佬的一番讨论，对malloc的内存分配机制有了更深入的了解：</p>
-<p>​    malloc 是用链表实现的</p>
-<p>​    内存以堆组成</p>
-<p>​    将可用的内存块连接为一个长长的列表的所谓空闲链表</p>
-<p>​    调用的时候就沿着链表找</p>
-<p>最后在一篇博文中找到了问题的答案：</p>
-<h6 id="原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><a href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850" class="headerlink" title="原文链接： https://blog.csdn.net/Fan0920/article/details/80999850"></a>原文链接： <a href="https://blog.csdn.net/Fan0920/article/details/80999850" target="_blank" rel="noopener">https://blog.csdn.net/Fan0920/article/details/80999850</a></h6><h2 id="问题的引出："><a href="#问题的引出：" class="headerlink" title="问题的引出："></a>问题的引出：</h2><p>堆包含一个链表来维护已用和空闲的内存块。在堆上新分配（用 new 或者 malloc）内存是从空闲的内存块中找到一些满足要求的合适块。所以可能让人觉得只要有很多不连续的零散的小区域，只要总数达到申请的内存块，就可以分配。</p>
-<p>  但事实上是不行的，这又让人觉得是不是零散的内存块不能连接成一个大的空间，而必须要一整块连续的内存空间才能申请成功呢。</p>
-<h2 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：</h2><ol>
-<li>申请和释放许多小的块可能会产生如下状态：在已用块之间存在很多小的空闲块。进而申请大块内存失败，虽然空闲块的总和足够，但是空闲的小块是零散的，不能满足申请的大小。这叫做“堆碎片”。</li>
-<li>当旁边有空闲块的已用块被释放时，新的空闲块会与相连的空闲块合并成一个大的空闲块，这样就可以有效的减少”堆碎片”的产生。</li>
-<li>堆分配的空间在<strong>逻辑地址上是连续的</strong>，但在<strong>物理地址上是不连续的</strong>（因为采用了页式内存管理,windows下有段机制、分页机制），如果逻辑地址空间上已经没有一段连续且足够大的空间，则分配内存失败。</li>
-</ol>
-<h3 id="堆栈的知识扩充："><a href="#堆栈的知识扩充：" class="headerlink" title="堆栈的知识扩充："></a>堆栈的知识扩充：</h3><p>原文地址： <a href="https://blog.csdn.net/jin13277480598/article/details/54406980" target="_blank" rel="noopener">https://blog.csdn.net/jin13277480598/article/details/54406980</a> </p>
+<p>– card 表</p>
+<p>id,</p>
+<p>name</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> card(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> card <span class="keyword">values</span>(<span class="number">1</span>,<span class="string">'饭卡'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> card <span class="keyword">values</span>(<span class="number">2</span>,<span class="string">'建行卡'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> card <span class="keyword">values</span>(<span class="number">3</span>,<span class="string">'农行卡'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> card <span class="keyword">values</span>(<span class="number">4</span>,<span class="string">'工商卡'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> card <span class="keyword">values</span>(<span class="number">5</span>,<span class="string">'邮政卡'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> person <span class="keyword">values</span>(<span class="number">1</span>,<span class="string">'张三'</span>,<span class="number">1</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> person <span class="keyword">values</span>(<span class="number">2</span>,<span class="string">'李四'</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> person <span class="keyword">values</span>(<span class="number">3</span>,<span class="string">'王五'</span>,<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="inner-join-查询（内连接）"><a href="#inner-join-查询（内连接）" class="headerlink" title="inner join 查询（内连接）"></a>inner join 查询（内连接）</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">inner</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
+<p>– 内联查询，其实就是两张表中的数据，通过某个字段相对，查询出相关记录数据。</p>
+<p>inner 可以省略</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">inner</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
+<h4 id="left-join-（左外连接）"><a href="#left-join-（左外连接）" class="headerlink" title="left join （左外连接）"></a>left join （左外连接）</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">left</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
+<p>– 左外连接，会把左边里面的所有数据取出来，而右边表中的数据，如果有相等的，就显示出来</p>
+<p>– 如果没有，就补 NULL</p>
+<h4 id="right-join（右外连接）"><a href="#right-join（右外连接）" class="headerlink" title="right join（右外连接）"></a>right join（右外连接）</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">right</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
+<p>– 右外连接，会把左边里面的所有数据取出来，而左边表中的数据，如果有相等的，就显示出来</p>
+<p>– 如果没有，就补 NULL</p>
+<h4 id="full-join（全外连接）"><a href="#full-join（全外连接）" class="headerlink" title="full join（全外连接）"></a>full join（全外连接）</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">full</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
+<p>– 因为MySQL不支持full join，所以这条语句在MySQL中运行会报错</p>
+<p>– 可以用左外连接+右外连接 得到全外连接的结果</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">left</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id</span><br><span class="line"><span class="keyword">union</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">right</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -241,33 +264,7 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/堆栈//" class="article-tag-list-link color3">堆栈</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/堆栈/随笔//" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -317,7 +314,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/37683.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/9e1390b6.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -331,18 +328,18 @@
   
 <nav id="article-nav">
   
-    <a href="/archives/46650.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/archives/3d3705e1.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          tip
+          mysql事务
         
       </div>
     </a>
   
   
-    <a href="/archives/3375.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">梦到一个卖花的两手空空跟我说 人要先感到幸福 才能看到玫瑰</div>
+    <a href="/archives/288d0f5b.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C 中printf无法输出问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -369,7 +366,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于malloc的内存分配"><span class="toc-number">1.</span> <span class="toc-text">关于malloc的内存分配</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#原文链接：-https-blog-csdn-net-Fan0920-article-details-80999850"><span class="toc-number">1.0.0.0.0.1.</span> <span class="toc-text">原文链接： https://blog.csdn.net/Fan0920/article/details/80999850</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题的引出："><span class="toc-number">1.1.</span> <span class="toc-text">问题的引出：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#答案："><span class="toc-number">1.2.</span> <span class="toc-text">答案：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#堆栈的知识扩充："><span class="toc-number">1.2.1.</span> <span class="toc-text">堆栈的知识扩充：</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL连接查询"><span class="toc-number">1.</span> <span class="toc-text">MySQL连接查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL的四种连接查询"><span class="toc-number">1.1.</span> <span class="toc-text">SQL的四种连接查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内连接"><span class="toc-number">1.1.1.</span> <span class="toc-text">内连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外连接"><span class="toc-number">1.1.2.</span> <span class="toc-text">外连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#inner-join-查询（内连接）"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">inner join 查询（内连接）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#left-join-（左外连接）"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">left join （左外连接）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#right-join（右外连接）"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">right join（右外连接）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#full-join（全外连接）"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">full join（全外连接）</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
