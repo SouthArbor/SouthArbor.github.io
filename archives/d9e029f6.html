@@ -8,14 +8,15 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>伪元素 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12tags:	- css学习笔记    伪元素给段落定义样式 首字母   :first-letter 1234p:first-letter&amp;#123;    color:red;    font-size:20px;&amp;#125;         首行   :first-line  123p:first-line&amp;#123;    background-color:yellow;&amp;#125;  元">
+  <meta name="description" content="伪元素给段落定义样式 首字母   :first-letter 1234p:first-letter&amp;#123;    color:red;    font-size:20px;&amp;#125;         首行   :first-line  123p:first-line&amp;#123;    background-color:yellow;&amp;#125;  元素最前边的部分   :before 123">
+<meta name="keywords" content="CSS学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="伪元素">
 <meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;d9e029f6.html">
 <meta property="og:site_name" content="S.Arbor的个人博客">
-<meta property="og:description" content="12tags:	- css学习笔记    伪元素给段落定义样式 首字母   :first-letter 1234p:first-letter&amp;#123;    color:red;    font-size:20px;&amp;#125;         首行   :first-line  123p:first-line&amp;#123;    background-color:yellow;&amp;#125;  元">
+<meta property="og:description" content="伪元素给段落定义样式 首字母   :first-letter 1234p:first-letter&amp;#123;    color:red;    font-size:20px;&amp;#125;         首行   :first-line  123p:first-line&amp;#123;    background-color:yellow;&amp;#125;  元素最前边的部分   :before 123">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-11-01T10:13:55.394Z">
+<meta property="og:updated_time" content="2020-11-01T14:08:11.502Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -52,27 +53,27 @@
 		</hgroup>
 		
 
-		<nav class="header-menu" target="_blank>
+		<nav class="header-menu" >
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/" >主页</a></li>
 	        
-				<li><a href="/categories">分类</a></li>
+				<li><a href="/categories" >分类</a></li>
 	        
-				<li><a href="/archives">归档</a></li>
+				<li><a href="/archives" >归档</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
+					<a q-on="click: openSlider(e, 'innerArchive')" target="_parent" href="javascript:void(0)">所有文章</a>
     			
             
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
+					<a q-on="click: openSlider(e, 'aboutme')" target="_parent" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -189,11 +190,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">	- css学习笔记</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h3><h4 id="给段落定义样式"><a href="#给段落定义样式" class="headerlink" title="给段落定义样式"></a>给段落定义样式</h4><ul>
+        <h3 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h3><h4 id="给段落定义样式"><a href="#给段落定义样式" class="headerlink" title="给段落定义样式"></a>给段落定义样式</h4><ul>
 <li><p>首字母</p>
 </li>
 <li><ul>
@@ -278,7 +275,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">CSS学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/CSS学习笔记//" class="article-tag-list-link color3">CSS学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -341,6 +360,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/archives/11ce754c.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          属性选择器
+        
+      </div>
+    </a>
   
   
     <a href="/archives/97dce093.html" id="article-nav-older" class="article-nav-link-wrap">
@@ -518,6 +546,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">HTML学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">CSS学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
               </li>
              
@@ -527,6 +563,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">-HTML学习笔记</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,14 +8,15 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>超链接 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12tags:	-HTML学习笔记  超链接 ​    &amp;lt;a&amp;gt;标签 ​    使用超链接可以让我们从一个页面跳转到另一个页面 ​    使用a标签来创建一个超链接 ​    属性： ​        href：指向链接跳转的目标地址，可以写一个相对路径也可以写一个完整的地址 ​            将地址链接设置为’#’，则点击超链接时，可以直接回到页面顶部 ​">
+  <meta name="description" content="超链接 ​    &amp;lt;a&amp;gt;标签 ​    使用超链接可以让我们从一个页面跳转到另一个页面 ​    使用a标签来创建一个超链接 ​    属性： ​        href：指向链接跳转的目标地址，可以写一个相对路径也可以写一个完整的地址 ​            将地址链接设置为’#’，则点击超链接时，可以直接回到页面顶部 ​            html中有一个属性，每一个元素都可">
+<meta name="keywords" content="HTML学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="超链接">
 <meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;59c34dbb.html">
 <meta property="og:site_name" content="S.Arbor的个人博客">
-<meta property="og:description" content="12tags:	-HTML学习笔记  超链接 ​    &amp;lt;a&amp;gt;标签 ​    使用超链接可以让我们从一个页面跳转到另一个页面 ​    使用a标签来创建一个超链接 ​    属性： ​        href：指向链接跳转的目标地址，可以写一个相对路径也可以写一个完整的地址 ​            将地址链接设置为’#’，则点击超链接时，可以直接回到页面顶部 ​">
+<meta property="og:description" content="超链接 ​    &amp;lt;a&amp;gt;标签 ​    使用超链接可以让我们从一个页面跳转到另一个页面 ​    使用a标签来创建一个超链接 ​    属性： ​        href：指向链接跳转的目标地址，可以写一个相对路径也可以写一个完整的地址 ​            将地址链接设置为’#’，则点击超链接时，可以直接回到页面顶部 ​            html中有一个属性，每一个元素都可">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-11-01T10:13:55.402Z">
+<meta property="og:updated_time" content="2020-11-01T14:15:21.236Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -52,27 +53,27 @@
 		</hgroup>
 		
 
-		<nav class="header-menu" target="_blank>
+		<nav class="header-menu" >
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/" >主页</a></li>
 	        
-				<li><a href="/categories">分类</a></li>
+				<li><a href="/categories" >分类</a></li>
 	        
-				<li><a href="/archives">归档</a></li>
+				<li><a href="/archives" >归档</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
+					<a q-on="click: openSlider(e, 'innerArchive')" target="_parent" href="javascript:void(0)">所有文章</a>
     			
             
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
+					<a q-on="click: openSlider(e, 'aboutme')" target="_parent" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -189,9 +190,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">	-HTML学习笔记</span><br></pre></td></tr></table></figure>
-
-<p>超链接</p>
+        <p>超链接</p>
 <p>​    &lt;a&gt;标签</p>
 <p>​    使用超链接可以让我们从一个页面跳转到另一个页面</p>
 <p>​    使用a标签来创建一个超链接</p>
@@ -243,7 +242,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">HTML学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/HTML学习笔记//" class="article-tag-list-link color4">HTML学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -492,6 +513,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">HTML学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">CSS学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
               </li>
              
@@ -501,6 +530,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">-HTML学习笔记</a>
               </li>
             
             <div class="clearfix"></div>
