@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://localhost:4000">
-  <title>HTML的语法规范 | S.Arbor的个人博客</title>
+  <title>ES6实用技巧 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTML的语法规范 ​    1.HTML中不区分大小写，但是我们一般都用小写 ​    2.HTML中的注释不能嵌套 ​    3.HTML标签接续结构完整，要么成对出现，要么自结束标签 ​    (浏览器尽最大的努力正确的解析页面，你所有的不符合语法规范的内容， ​    浏览器都会为你自动修正，但是有些情况会修正错误) ​    4.HTML标签可以嵌套，但是不能交叉嵌套 ​    5.HT">
+  <meta name="description" content="1.打乱数组顺序1234let arr &#x3D; [&quot;😀&quot;, 67, true, false, &quot;55&quot;];console.log(arr);arr &#x3D; arr.sort(() &#x3D;&gt; 0.5 - Math.random());console.log(arr);  2.去除数字之外的所有字符 123const str &#x3D; &quot;ccg 114514  is 981114 so handsome 223">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML的语法规范">
-<meta property="og:url" content="http://localhost:4000/archives/c55c6939.html">
+<meta property="og:title" content="ES6实用技巧">
+<meta property="og:url" content="http://localhost:4000/archives/65d27681.html">
 <meta property="og:site_name" content="S.Arbor的个人博客">
-<meta property="og:description" content="HTML的语法规范 ​    1.HTML中不区分大小写，但是我们一般都用小写 ​    2.HTML中的注释不能嵌套 ​    3.HTML标签接续结构完整，要么成对出现，要么自结束标签 ​    (浏览器尽最大的努力正确的解析页面，你所有的不符合语法规范的内容， ​    浏览器都会为你自动修正，但是有些情况会修正错误) ​    4.HTML标签可以嵌套，但是不能交叉嵌套 ​    5.HT">
+<meta property="og:description" content="1.打乱数组顺序1234let arr &#x3D; [&quot;😀&quot;, 67, true, false, &quot;55&quot;];console.log(arr);arr &#x3D; arr.sort(() &#x3D;&gt; 0.5 - Math.random());console.log(arr);  2.去除数字之外的所有字符 123const str &#x3D; &quot;ccg 114514  is 981114 so handsome 223">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-17T14:40:07.508Z">
-<meta property="article:modified_time" content="2022-08-22T12:57:38.958Z">
+<meta property="article:published_time" content="2022-09-23T07:47:54.000Z">
+<meta property="article:modified_time" content="2022-09-23T08:02:09.856Z">
 <meta property="article:author" content="S.Arbor">
-<meta property="article:tag" content="HTML学习笔记">
+<meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -165,20 +165,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HTML的语法规范" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ES6实用技巧" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HTML的语法规范
+      ES6实用技巧
     </h1>
   
 
         
-        <a href="/archives/c55c6939.html" class="archive-article-date">
-  	<time datetime="2020-09-17T14:40:07.508Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-17</time>
+        <a href="/archives/65d27681.html" class="archive-article-date">
+  	<time datetime="2022-09-23T07:47:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-23</time>
 </a>
         
     
@@ -194,14 +194,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>HTML的语法规范</p>
-<p>​    1.HTML中不区分大小写，但是我们一般都用小写</p>
-<p>​    2.HTML中的注释不能嵌套</p>
-<p>​    3.HTML标签接续结构完整，要么成对出现，要么自结束标签</p>
-<p>​    (浏览器尽最大的努力正确的解析页面，你所有的不符合语法规范的内容，</p>
-<p>​    浏览器都会为你自动修正，但是有些情况会修正错误)</p>
-<p>​    4.HTML标签可以嵌套，但是不能交叉嵌套</p>
-<p>​    5.HTML标签中的属性必须有值，且值必须加引号（双引号单引号都可以）</p>
+        <h5 id="1-打乱数组顺序"><a href="#1-打乱数组顺序" class="headerlink" title="1.打乱数组顺序"></a>1.打乱数组顺序</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">"😀"</span>, <span class="number">67</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="string">"55"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line">arr = arr.sort(<span class="function"><span class="params">()</span> =&gt;</span> <span class="number">0.5</span> - <span class="built_in">Math</span>.random());</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+
+<p>2.去除数字之外的所有字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">"ccg 114514  is 981114 so handsome 223333"</span>;</span><br><span class="line"><span class="keyword">const</span> numbers = str.replace(<span class="regexp">/\D/g</span>, <span class="string">""</span>);</span><br><span class="line"><span class="built_in">console</span>.log(numbers);<span class="comment">//114514981114223333</span></span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>3.反转字符串或者单词</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sentence = <span class="string">"ccg is so handsome, lol."</span>;</span><br><span class="line"><span class="keyword">const</span> reverseSentence = reverseBySeparator(sentence, <span class="string">""</span>);</span><br><span class="line"><span class="built_in">console</span>.log(reverseSentence);</span><br><span class="line"><span class="comment">//.lol ,emosdnah os si gcc</span></span><br><span class="line"><span class="keyword">const</span> reverseEachWord = reverseBySeparator(reverseSentence, <span class="string">" "</span>);</span><br><span class="line"><span class="built_in">console</span>.log(reverseEachWord);</span><br><span class="line"><span class="comment">//gcc si os ,emosdnah .lol</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseBySeparator</span>(<span class="params">str, separator</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str.split(separator).reverse().join(separator);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.将十进制转换为二进制或十六进制</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num1 = <span class="number">43</span>;</span><br><span class="line"><span class="keyword">const</span> binaryNum = num1.toString(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(binaryNum);</span><br><span class="line"><span class="comment">//101011</span></span><br><span class="line"><span class="keyword">const</span> hexadecimalNum = num1.toString(<span class="number">16</span>);</span><br><span class="line"><span class="built_in">console</span>.log(hexadecimalNum);</span><br></pre></td></tr></table></figure>
+
+<p>5.合并多个对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> city = &#123;</span><br><span class="line">  name: <span class="string">"chongqing"</span>,</span><br><span class="line">  population: <span class="string">"200000"</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> location1 = &#123;</span><br><span class="line">  longitude: <span class="string">"106.55"</span>,</span><br><span class="line">  latitude: <span class="string">"29.56"</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> fullCity = &#123; ...city, ...location1 &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(fullCity);</span><br><span class="line"><span class="comment">//&#123;name: 'chongqing', population: '200000', longitude: '106.55', latitude: '29.56'&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>6.解构复制</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> forest = &#123;</span><br><span class="line">  location2: <span class="string">"Sweden"</span>,</span><br><span class="line">  animals: <span class="number">3</span>,</span><br><span class="line">  animalsTypes: [<span class="string">"Lions"</span>, <span class="string">"Tigers"</span>, <span class="string">"Bear"</span>],</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; location2, animals, animalsTypes &#125; = forest;</span><br><span class="line"><span class="keyword">const</span> [lions, tigers, bears] = animalsTypes;</span><br><span class="line"><span class="built_in">console</span>.log(location2); <span class="comment">//Sweden</span></span><br><span class="line"><span class="built_in">console</span>.log(animals); <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">console</span>.log(lions); <span class="comment">// Lions</span></span><br><span class="line"><span class="built_in">console</span>.log(tigers); <span class="comment">// Tigers</span></span><br><span class="line"><span class="built_in">console</span>.log(bears); <span class="comment">// Bear</span></span><br></pre></td></tr></table></figure>
+
+<p>7.交换变量的值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cats = <span class="string">"cats"</span>;</span><br><span class="line">   <span class="keyword">let</span> dogs = <span class="string">"dogs"</span>;</span><br><span class="line">   [cats, dogs] = [dogs, cats];</span><br><span class="line">   <span class="built_in">console</span>.log(cats); <span class="comment">// dags</span></span><br><span class="line">   <span class="built_in">console</span>.log(dogs); <span class="comment">// cats</span></span><br></pre></td></tr></table></figure>
+
+<p>8.判断两个字符串是否为 中心对称关系</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isReverse = <span class="function">(<span class="params">str1, str2</span>) =&gt;</span> &#123;</span><br><span class="line">     <span class="keyword">const</span> normalize = <span class="function">(<span class="params">str</span>) =&gt;</span></span><br><span class="line">       str.toLowerCase().normalize(<span class="string">"NFD"</span>).split(<span class="string">""</span>).reverse().join(<span class="string">""</span>);</span><br><span class="line">     <span class="built_in">console</span>.log(normalize(str1));</span><br><span class="line">     <span class="keyword">return</span> normalize(str1) === str2;</span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="built_in">console</span>.log(isReverse(<span class="string">"anagram"</span>, <span class="string">"margana"</span>)); <span class="comment">// true</span></span><br><span class="line">   <span class="built_in">console</span>.log(isReverse(<span class="string">"rac"</span>, <span class="string">"car"</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>9.可选链操作符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> player = &#123;</span><br><span class="line">     name: <span class="string">"ccg"</span>,</span><br><span class="line">     rating: <span class="number">1000</span>,</span><br><span class="line">     click: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="string">"click"</span>;</span><br><span class="line">     &#125;,</span><br><span class="line">     pass: <span class="function">(<span class="params">teammate</span>) =&gt;</span> &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="string">"Pass to $&#123;teammate&#125;"</span>;</span><br><span class="line">     &#125;,</span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="built_in">console</span>.log(player?.name); <span class="comment">// ccg</span></span><br><span class="line">   <span class="built_in">console</span>.log(player?.click?.()); <span class="comment">//click</span></span><br><span class="line">   <span class="built_in">console</span>.log(player?.teammate?.()); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<p><em>MDN: 可选链操作符( ?. )允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。?. 操作符的功能类似于 . 链式操作符，不同之处在于，在引用为空(nullish ) (null 或者 undefined) 的情况下不会引起错误，该表达式短路返回值是 undefined。与函数调用一起使用时，如果给定的函数不存在，则返回 undefined</em></p>
+<p>例如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(res &amp;&amp; res.data &amp;&amp; res.data.succes)&#123;</span><br><span class="line">    <span class="comment">//code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>相当于:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(res?.data?.success)&#123;</span><br><span class="line">   <span class="comment">//code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -241,7 +268,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HTML学习笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -253,7 +280,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/HTML学习笔记/" class="article-tag-list-link color4">HTML学习笔记</a>
+        			<a href="/categories/前端/" class="article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -308,7 +335,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/c55c6939.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/65d27681.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -322,18 +349,9 @@
   
 <nav id="article-nav">
   
-    <a href="/archives/14a4c1f7.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          内联框架
-        
-      </div>
-    </a>
   
-  
-    <a href="/archives/8fd588e7.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">meta标签</div>
+    <a href="/archives/9884a7c3.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js中的12种循环遍历方法【总结】</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -360,7 +378,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-打乱数组顺序"><span class="toc-number">1.</span> <span class="toc-text">1.打乱数组顺序</span></a></li></ol>
                     </div>
                 </span>
             </div>

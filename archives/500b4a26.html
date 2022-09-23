@@ -8,15 +8,17 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>watch | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="watch的用处​    1、监听路由的变化 1234567watch:&amp;#123;	$route(to,from)&amp;#123;		&#x2F;&#x2F;to    ===&amp;gt;  最新的路由		&#x2F;&#x2F;from  ===&amp;gt;  上一次的路由		console.log(to.path,from.path)	&amp;#125;&amp;#125;  ​    2、监听数据的变化">
-<meta name="keywords" content="vue">
+  <meta name="description" content="watch的用处​    1、监听路由的变化 1234567watch:&amp;#123;	$route(to,from)&amp;#123;		&#x2F;&#x2F;to    &#x3D;&#x3D;&#x3D;&gt;  最新的路由		&#x2F;&#x2F;from  &#x3D;&#x3D;&#x3D;&gt;  上一次的路由		console.log(to.path,from.path)	&amp;#12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="watch">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;500b4a26.html">
+<meta property="og:url" content="http://localhost:4000/archives/500b4a26.html">
 <meta property="og:site_name" content="S.Arbor的个人博客">
-<meta property="og:description" content="watch的用处​    1、监听路由的变化 1234567watch:&amp;#123;	$route(to,from)&amp;#123;		&#x2F;&#x2F;to    ===&amp;gt;  最新的路由		&#x2F;&#x2F;from  ===&amp;gt;  上一次的路由		console.log(to.path,from.path)	&amp;#125;&amp;#125;  ​    2、监听数据的变化">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-09-07T04:38:15.144Z">
+<meta property="og:description" content="watch的用处​    1、监听路由的变化 1234567watch:&amp;#123;	$route(to,from)&amp;#123;		&#x2F;&#x2F;to    &#x3D;&#x3D;&#x3D;&gt;  最新的路由		&#x2F;&#x2F;from  &#x3D;&#x3D;&#x3D;&gt;  上一次的路由		console.log(to.path,from.path)	&amp;#12">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-25T13:51:57.000Z">
+<meta property="article:modified_time" content="2022-09-07T04:38:15.144Z">
+<meta property="article:author" content="S.Arbor">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -35,7 +37,7 @@
 
   
 
-</head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -193,23 +195,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h5 id="watch的用处"><a href="#watch的用处" class="headerlink" title="watch的用处"></a>watch的用处</h5><p>​    1、监听路由的变化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">	$route(to,from)&#123;</span><br><span class="line">		//to    ===&gt;  最新的路由</span><br><span class="line">		//from  ===&gt;  上一次的路由</span><br><span class="line">		console.log(to.path,from.path)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">	$route(to,from)&#123;</span><br><span class="line">		&#x2F;&#x2F;to    &#x3D;&#x3D;&#x3D;&gt;  最新的路由</span><br><span class="line">		&#x2F;&#x2F;from  &#x3D;&#x3D;&#x3D;&gt;  上一次的路由</span><br><span class="line">		console.log(to.path,from.path)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    2、监听数据的变化</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">	a(newVal,oldVal)&#123;</span><br><span class="line">		//newVal ==&gt; 最新的值</span><br><span class="line">		//oldVal ==&gt; 之前的值</span><br><span class="line">		console.log(newVal,oldVal)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">	a(newVal,oldVal)&#123;</span><br><span class="line">		&#x2F;&#x2F;newVal &#x3D;&#x3D;&gt; 最新的值</span><br><span class="line">		&#x2F;&#x2F;oldVal &#x3D;&#x3D;&gt; 之前的值</span><br><span class="line">		console.log(newVal,oldVal)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>3、深度监听</p>
 <p>​    ***监听b但是b的c改变了，所以要监听b里所有的属性变化，就要用到深度监听</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">data()&#123;</span><br><span class="line">	return &#123;</span><br><span class="line">        a:1,</span><br><span class="line">        b:&#123;</span><br><span class="line">            c:1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">watch:&#123;</span><br><span class="line">    a(newVal,oldVal)&#123;</span><br><span class="line">		//newVal ==&gt; 最新的值</span><br><span class="line">		//oldVal ==&gt; 之前的值</span><br><span class="line">		console.log(newVal,oldVal)</span><br><span class="line">	&#125;,</span><br><span class="line">    b:&#123;</span><br><span class="line">        handler(newVal)&#123;</span><br><span class="line">            console.log(&quot;B:&quot;,newVal.c)</span><br><span class="line">        &#125;,</span><br><span class="line">        deep:true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">data()&#123;</span><br><span class="line">	return &#123;</span><br><span class="line">        a:1,</span><br><span class="line">        b:&#123;</span><br><span class="line">            c:1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">watch:&#123;</span><br><span class="line">    a(newVal,oldVal)&#123;</span><br><span class="line">		&#x2F;&#x2F;newVal &#x3D;&#x3D;&gt; 最新的值</span><br><span class="line">		&#x2F;&#x2F;oldVal &#x3D;&#x3D;&gt; 之前的值</span><br><span class="line">		console.log(newVal,oldVal)</span><br><span class="line">	&#125;,</span><br><span class="line">    b:&#123;</span><br><span class="line">        handler(newVal)&#123;</span><br><span class="line">            console.log(&quot;B:&quot;,newVal.c)</span><br><span class="line">        &#125;,</span><br><span class="line">        deep:true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 
 
       
 
       
         <div class="page-reward">
-          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
               赏
@@ -243,7 +245,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -269,35 +271,35 @@
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+      <a href="javascript:;" class="share-sns share-outer">
         <i class="icon icon-share"></i>
       </a>
     </span>
     <span class="tooltip-content">
       <div class="share-wrap">
         <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
             <i class="icon icon-weibo"></i>
           </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
             <i class="icon icon-weixin"></i>
           </a>
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
             <i class="icon icon-qq"></i>
           </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
             <i class="icon icon-douban"></i>
           </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
             <i class="icon icon-qzone"></i>
           </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
             <i class="icon icon-facebook"></i>
           </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
             <i class="icon icon-twitter"></i>
           </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+          <a class="google share-sns" href="javascript:;" data-type="google">
             <i class="icon icon-google"></i>
           </a>
         </div>
@@ -307,7 +309,7 @@
 </div>
 
 <div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
       <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/500b4a26.html" alt="微信分享二维码">
@@ -346,7 +348,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -476,15 +478,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:friends">友情链接</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -505,55 +507,55 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
+                <a href="javascript:void(0)" class="js-tag color3">试题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">HTML学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color4">HTML学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">axios</a>
+                <a href="javascript:void(0)" class="js-tag color3">CSS学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">CSS学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">tree</a>
+                <a href="javascript:void(0)" class="js-tag color5">tree</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
             
             <div class="clearfix"></div>

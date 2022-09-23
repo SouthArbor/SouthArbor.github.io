@@ -8,14 +8,17 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>vue路由 | S.Arbor的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vue路由(router、单页面应用、SPA) ​    单页面应用：一个url（只有一个html） ​    1、跳转不同组件 ​    2、路径传值 ​    3、拦截 ​        ……. 使用： ​    vue create &amp;lt;项目名称&amp;gt; ​    选择自定义安装：安装Router ​    目录结构： ​        router&#x2F;index ==》    路由的配置">
+  <meta name="description" content="Vue路由(router、单页面应用、SPA) ​    单页面应用：一个url（只有一个html） ​    1、跳转不同组件 ​    2、路径传值 ​    3、拦截 ​        ……. 使用： ​    vue create &lt;项目名称&gt; ​    选择自定义安装：安装Router ​    目录结构： ​        router&#x2F;index &#x3D;&#x3D;》    路由的配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue路由">
-<meta property="og:url" content="http:&#x2F;&#x2F;localhost:4000&#x2F;archives&#x2F;10901cde.html">
+<meta property="og:url" content="http://localhost:4000/archives/10901cde.html">
 <meta property="og:site_name" content="S.Arbor的个人博客">
-<meta property="og:description" content="Vue路由(router、单页面应用、SPA) ​    单页面应用：一个url（只有一个html） ​    1、跳转不同组件 ​    2、路径传值 ​    3、拦截 ​        ……. 使用： ​    vue create &amp;lt;项目名称&amp;gt; ​    选择自定义安装：安装Router ​    目录结构： ​        router&#x2F;index ==》    路由的配置">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-09-07T04:38:10.260Z">
+<meta property="og:description" content="Vue路由(router、单页面应用、SPA) ​    单页面应用：一个url（只有一个html） ​    1、跳转不同组件 ​    2、路径传值 ​    3、拦截 ​        ……. 使用： ​    vue create &lt;项目名称&gt; ​    选择自定义安装：安装Router ​    目录结构： ​        router&#x2F;index &#x3D;&#x3D;》    路由的配置">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-07T04:44:14.000Z">
+<meta property="article:modified_time" content="2022-09-07T13:30:38.890Z">
+<meta property="article:author" content="S.Arbor">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="S.Arbor的个人博客" type="application/atom+xml">
@@ -34,7 +37,7 @@
 
   
 
-</head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -175,7 +178,7 @@
 
         
         <a href="/archives/10901cde.html" class="archive-article-date">
-  	<time datetime="2022-08-25T07:45:48.067Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-25</time>
+  	<time datetime="2022-09-07T04:44:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-07</time>
 </a>
         
     
@@ -206,29 +209,29 @@
 <p>​        components ==》    页面模块</p>
 <h5 id="router-link配置"><a href="#router-link配置" class="headerlink" title="router-link配置"></a>router-link配置</h5><p>​    1.to ：表示目标路由的链接</p>
 <p>​        1.1 跳转形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link to=&quot;/my&quot;&gt;我的&lt;/router-link&gt;</span><br><span class="line">&lt;router-link :to=&quot;&#123;path:&apos;/my&apos;&#125;&quot;&gt;新的path我的&lt;/router-link&gt;</span><br><span class="line">&lt;router-link :to=&quot;&#123;name:&apos;My&apos;&#125;&quot;&gt;新的name我的&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;my&quot;&gt;我的&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-link :to&#x3D;&quot;&#123;path:&#39;&#x2F;my&#39;&#125;&quot;&gt;新的path我的&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-link :to&#x3D;&quot;&#123;name:&#39;My&#39;&#125;&quot;&gt;新的name我的&lt;&#x2F;router-link&gt;</span><br></pre></td></tr></table></figure>
 
 <p>​        1.2 路径传值</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;&#123;name:&apos;My&apos;,query:&#123;a:1&#125;&#125;&quot;&gt;路径传值&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to&#x3D;&quot;&#123;name:&#39;My&#39;,query:&#123;a:1&#125;&#125;&quot;&gt;路径传值&lt;&#x2F;router-link&gt;</span><br></pre></td></tr></table></figure>
 
 <p>​    2.tag</p>
 <p>​        默认生成a标签，如果希望生成其他标签，比如div：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link to=&quot;/my&quot; tag=&quot;div&quot;&gt;我的&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link to&#x3D;&quot;&#x2F;my&quot; tag&#x3D;&quot;div&quot;&gt;我的&lt;&#x2F;router-link&gt;</span><br></pre></td></tr></table></figure>
 
 <p>​    3.组件形式的跳转方式</p>
 <p>​        replace</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;&#123;path:&quot;&quot;&#125;&quot; replace&gt;我的&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to&#x3D;&quot;&#123;path:&quot;&quot;&#125;&quot; replace&gt;我的&lt;&#x2F;router-link&gt;</span><br></pre></td></tr></table></figure>
 
-<p>​        appenf</p>
+<p>​        append</p>
 <p>​    4.exact:精准路由匹配模式</p>
 <p>​    5.通过js的跳转方式</p>
 <p>​        <code>router.push</code>：打开新页面，并且可以返回上一页</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$router.push(&apos;/my&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$router.push(&#39;&#x2F;my&#39;)</span><br></pre></td></tr></table></figure>
 
 <p>​        <code>router.replace</code>：打开新页面，不能返回上一页</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$router.replace`(&apos;/my&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$router.replace&#96;(&#39;&#x2F;my&#39;)</span><br></pre></td></tr></table></figure>
 
 <p>​        <code>router.go</code>：打开新页面，跳转到第几层</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$router.go()</span><br></pre></td></tr></table></figure>
@@ -237,7 +240,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$router.back()</span><br></pre></td></tr></table></figure>
 
 <p>***传值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">this,$router.push(&#123;</span><br><span class="line">	path:&apos;/my&apos;,</span><br><span class="line">	query:&#123;</span><br><span class="line">		type:&apos;selectList&apos;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">this,$router.push(&#123;</span><br><span class="line">	path:&#39;&#x2F;my&#39;,</span><br><span class="line">	query:&#123;</span><br><span class="line">		type:&#39;selectList&#39;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -248,7 +251,7 @@
 
       
         <div class="page-reward">
-          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
               赏
@@ -277,7 +280,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端/" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -286,35 +311,35 @@
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+      <a href="javascript:;" class="share-sns share-outer">
         <i class="icon icon-share"></i>
       </a>
     </span>
     <span class="tooltip-content">
       <div class="share-wrap">
         <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
             <i class="icon icon-weibo"></i>
           </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
             <i class="icon icon-weixin"></i>
           </a>
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
             <i class="icon icon-qq"></i>
           </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
             <i class="icon icon-douban"></i>
           </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
             <i class="icon icon-qzone"></i>
           </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
             <i class="icon icon-facebook"></i>
           </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
             <i class="icon icon-twitter"></i>
           </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+          <a class="google share-sns" href="javascript:;" data-type="google">
             <i class="icon icon-google"></i>
           </a>
         </div>
@@ -324,7 +349,7 @@
 </div>
 
 <div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
       <img src="//pan.baidu.com/share/qrcode?url=http://localhost:4000/archives/10901cde.html" alt="微信分享二维码">
@@ -341,18 +366,18 @@
   
 <nav id="article-nav">
   
-    <a href="/archives/7e341d2d.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/archives/9884a7c3.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          导航守卫
+          js中的12种循环遍历方法【总结】
         
       </div>
     </a>
   
   
-    <a href="/archives/acf0d1bc.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">axios请求、封装及解耦</div>
+    <a href="/archives/4b75455a.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vuex状态管理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -363,7 +388,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -493,15 +518,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:friends">友情链接</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -522,55 +547,55 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">试题</a>
+                <a href="javascript:void(0)" class="js-tag color3">试题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">HTML学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color4">HTML学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">axios</a>
+                <a href="javascript:void(0)" class="js-tag color3">CSS学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">CSS学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">tree</a>
+                <a href="javascript:void(0)" class="js-tag color5">tree</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">leetcode</a>
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
             
             <div class="clearfix"></div>
